@@ -1,6 +1,7 @@
 use soccer_project;
 drop table if exists Scorers; 
--- drop table if exists Matches;
+drop table if exists Scores;
+drop table if exists Matches;
 drop table if exists Seasons;
 drop table if exists Players;
 drop table if exists Coaches;
@@ -17,5 +18,6 @@ create table Teams(team_id int primary key, name varchar(50) not null, league_id
 create table Coaches(coach_id int primary key, name varchar(50) not null, team_id int, country_id int);
 create table Players(player_id int primary key, team_id int, name varchar(50) not null, position varchar(50), date_of_birth date, country_id int);
 create table Seasons(season_id int primary key, league_id int, year char(4));
--- match see if merge with scores
+create table Matches(match_id int primary key, home_team_id int, away_team_id int, league_id int, season_id int, stadium_id int, winner_id int, match_referee_id int, utc_kickoff date);
+create table Scores(score_id int primary key, match_id int, full_time_home int, full_time_away int, half_time_home int, half_time_away int);
 create table Scorers(scorer_id int primary key, player_id int, season_id int, league_id int, goals int, assists int, penalties int);
