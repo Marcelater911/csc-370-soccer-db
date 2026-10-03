@@ -1,4 +1,5 @@
 use soccer_project;
+drop table if exists Scorers; 
 -- drop table if exists Matches;
 drop table if exists Seasons;
 drop table if exists Players;
@@ -16,4 +17,5 @@ create table Referees(referee_id int primary key, name varchar(50) not null, cou
 create table Coaches(coach_id int primary key, name varchar(50) not null, team_id int, country_id int);
 create table Players(player_id int primary key, team_id int, name varchar(50) not null, position varchar(50), date_of_birth date, country_id int);
 create table Seasons(season_id int primary key, league_id int, year YEAR);
--- match see if er merge with scorer
+-- match see if merge with scores
+create table Scorers(scorer_id int primary key, player_id int, season_id int, league_id int, goals int, assists int);
