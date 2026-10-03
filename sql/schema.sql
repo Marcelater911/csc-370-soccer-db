@@ -16,6 +16,6 @@ create table Referees(referee_id int primary key, name varchar(50) not null, cou
 -- teams check if they drop coach id
 create table Coaches(coach_id int primary key, name varchar(50) not null, team_id int, country_id int);
 create table Players(player_id int primary key, team_id int, name varchar(50) not null, position varchar(50), date_of_birth date, country_id int);
-create table Seasons(season_id int primary key, league_id int, year YEAR);
+create table Seasons(season_id int primary key, league_id int, year char(4));
 -- match see if merge with scores
-create table Scorers(scorer_id int primary key, player_id int, season_id int, league_id int, goals int, assists int);
+create table Scorers(scorer_id int primary key, player_id int, season_id int, league_id int, goals int, assists int, penlties int);
