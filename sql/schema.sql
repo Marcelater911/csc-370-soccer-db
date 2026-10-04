@@ -43,7 +43,7 @@ CREATE TABLE Stadiums (
 CREATE TABLE Referees (
     referee_id int PRIMARY KEY,
     name       varchar(50) NOT NULL,
-    country_id int
+    country_id int,
     FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
@@ -52,8 +52,8 @@ CREATE TABLE Teams (
     name             varchar(50) NOT NULL,
     league_id        int,
     stadium_id       int,
-    year_established int
-    FOREIGN KEY (league_id) REFERENCES Leagues (league_id)
+    year_established int,
+    FOREIGN KEY (league_id) REFERENCES Leagues (league_id),
     FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id)
 );
 
@@ -70,14 +70,14 @@ CREATE TABLE Players (
     name          varchar(50) NOT NULL,
     position      varchar(50),
     date_of_birth date,
-    country_id    int
-    FOREIGN KEY (country_id) REFERENCES Country (country_id)
+    country_id    int,
+    FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
 CREATE TABLE Seasons (
     season_id int PRIMARY KEY,
     league_id int,
-    year      char(4)
+    year      char(4),
     FOREIGN KEY (league_id) REFERENCES Leagues (league_id)
 );
 
