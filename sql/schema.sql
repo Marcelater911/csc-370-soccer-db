@@ -85,7 +85,6 @@ CREATE TABLE Matches (
     match_id        int PRIMARY KEY,
     home_team_id    int,
     away_team_id    int,
-    league_id       int,
     season_id       int,
     stadium_id      int,
     winner_id       int,
@@ -117,22 +116,18 @@ CREATE TABLE MatchStatistics (
     away_tackles         int,
     home_total_passes    int,
     away_total_passes    int,
-    home_possession      float(3,2),
-    away_possession      float(3,2)
+    home_possession      float(3,2)
 );
 
 CREATE TABLE Standings (
     standing_id     int PRIMARY KEY,
-    league_id       int,
     season_id       int,
     team_id         int,
     position        int,
     wins            int,
     losses          int,
     draws           int,
-    points          int,
     goal_difference int,
-    games_played    int,
     promotion       boolean,
     relegation      boolean
 );
@@ -141,7 +136,6 @@ CREATE TABLE Scorers (
     scorer_id int PRIMARY KEY,
     player_id int,
     season_id int,
-    league_id int,
     goals     int,
     assists   int,
     penalties int
