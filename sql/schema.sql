@@ -92,21 +92,28 @@ CREATE TABLE Matches (
     stadium_id      int,
     winner_id       int,
     match_referee_id int,
-    utc_kickoff     date
+    utc_kickoff     date,
+    FOREIGN KEY (home_team_id) REFERENCES Teams (team_id),
+    FOREIGN KEY (away_team_id) REFERENCES Teams (team_id),
+    FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
+    FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id),
+    FOREIGN KEY (winner_id) REFERENCES Teams (team_id),
+    FOREIGN KEY (match_referee_id) REFERENCES Referees (referee_id)
 );
 
 CREATE TABLE Scores (
     score_id        int PRIMARY KEY,
-    match_id        int,
+    match_id        int UNIQUE,
     full_time_home  int,
     full_time_away  int,
     half_time_home  int,
-    half_time_away  int
+    half_time_away  int,
+    FOREIGN KEY (match_id) REFERENCES Matches (match_id)
 );
 
 CREATE TABLE MatchStatistics (
     statistic_id        int PRIMARY KEY,
-    match_id             int,
+    match_id             int UNIQUE,
     home_total_shots     int,
     away_total_shots     int,
     home_shot_accuracy   float(3,2),
@@ -119,7 +126,8 @@ CREATE TABLE MatchStatistics (
     away_tackles         int,
     home_total_passes    int,
     away_total_passes    int,
-    home_possession      float(3,2)
+    home_possession      float(3,2),
+    FOREIGN KEY (match_id) REFERENCES Matches (match_id)
 );
 
 CREATE TABLE Standings (
@@ -132,7 +140,9 @@ CREATE TABLE Standings (
     draws           int,
     goal_difference int,
     promotion       boolean,
-    relegation      boolean
+    relegation      boolean,
+    FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
+    FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 
 CREATE TABLE Scorers (
@@ -141,5 +151,7 @@ CREATE TABLE Scorers (
     season_id int,
     goals     int,
     assists   int,
-    penalties int
+    penalties int,
+    FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
+    FOREIGN KEY (player_id) REFERENCES Players (player_id)
 );
