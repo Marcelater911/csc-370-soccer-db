@@ -60,8 +60,10 @@ CREATE TABLE Teams (
 CREATE TABLE Coaches (
     coach_id   int PRIMARY KEY,
     name       varchar(50) NOT NULL,
-    team_id    int,
-    country_id int
+    team_id    int UNIQUE,
+    country_id int,
+    FOREIGN KEY (country_id) REFERENCES Countries(country_id),
+    FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 
 CREATE TABLE Players (
@@ -71,7 +73,8 @@ CREATE TABLE Players (
     position      varchar(50),
     date_of_birth date,
     country_id    int,
-    FOREIGN KEY (country_id) REFERENCES Countries (country_id)
+    FOREIGN KEY (country_id) REFERENCES Countries (country_id),
+    FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 
 CREATE TABLE Seasons (
