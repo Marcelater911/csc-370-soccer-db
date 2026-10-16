@@ -22,6 +22,17 @@ CREATE TABLE Countries (
     flag_url   varchar(255)
 );
 
+CREATE TABLE Person (
+    person_id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE,
+    country_id INT,
+
+    FOREIGN KEY (country_id)
+        REFERENCES Countries(country_id)
+);
+
 CREATE TABLE Leagues (
     league_id        int PRIMARY KEY,
     name             varchar(50) NOT NULL,
@@ -38,10 +49,13 @@ CREATE TABLE Stadiums (
 );
 
 CREATE TABLE Referees (
-    referee_id int PRIMARY KEY,
-    name       varchar(50) NOT NULL,
-    country_id int,
-    FOREIGN KEY (country_id) REFERENCES Countries (country_id)
+    person_id int PRIMARY KEY,
+
+    FOREIGN KEY(person_id) 
+        REFERENCES Person(person_id)
+        ON DELETE CASCADE
+        
+    
 );
 
 CREATE TABLE Teams (
@@ -55,22 +69,18 @@ CREATE TABLE Teams (
 );
 
 CREATE TABLE Coaches (
-    coach_id   int PRIMARY KEY,
-    name       varchar(50) NOT NULL,
+    person_id   int PRIMARY KEY,
+    
     team_id    int UNIQUE,
-    country_id int,
-    FOREIGN KEY (country_id) REFERENCES Countries(country_id),
+    FOREIGN KEY (person_id) REFERENCES Person(person_id) ON DELETE CASCADE,
     FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 
 CREATE TABLE Players (
-    player_id     int PRIMARY KEY,
+    person_id     int PRIMARY KEY,
     team_id       int,
-    name          varchar(50) NOT NULL,
     position      varchar(50),
-    date_of_birth date,
-    country_id    int,
-    FOREIGN KEY (country_id) REFERENCES Countries (country_id),
+    FOREIGN KEY (person_id) REFERENCES Person (person_id) ON DELETE CASCADE,
     FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 
@@ -95,7 +105,7 @@ CREATE TABLE Matches (
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
     FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id),
     FOREIGN KEY (winner_id) REFERENCES Teams (team_id),
-    FOREIGN KEY (match_referee_id) REFERENCES Referees (referee_id)
+    FOREIGN KEY (match_referee_id) REFERENCES Referees (person_id)
 );
 
 CREATE TABLE Scores (
@@ -144,11 +154,13 @@ CREATE TABLE Standings (
 
 CREATE TABLE Scorers (
     scorer_id int PRIMARY KEY,
-    player_id int,
+    person_id int,
     season_id int,
     goals     int,
     assists   int,
     penalties int,
+
+    UNIQUE (person_id, season_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
-    FOREIGN KEY (player_id) REFERENCES Players (player_id)
+    FOREIGN KEY (person_id) REFERENCES Players (person_id)
 );
