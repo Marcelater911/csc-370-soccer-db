@@ -27,9 +27,6 @@ CREATE TABLE Leagues (
     name             varchar(50) NOT NULL,
     country_id       int NOT NULL,
     num_of_teams     int,
-    ucl_spots        int,
-    uel_spots        int,
-    relegation_spots int,
     FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
