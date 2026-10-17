@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS Scorers;
 DROP TABLE IF EXISTS Standings;
 DROP TABLE IF EXISTS MatchStatistics;
 DROP TABLE IF EXISTS Scores;
-DROP TABLE IF EXISTS `Matches`;
+DROP TABLE IF EXISTS Fixtures;
 DROP TABLE IF EXISTS Seasons;
 DROP TABLE IF EXISTS Players;
 DROP TABLE IF EXISTS Coaches;
@@ -91,7 +91,7 @@ CREATE TABLE Seasons (
     FOREIGN KEY (league_id) REFERENCES Leagues (league_id)
 );
 
-CREATE TABLE Matches (
+CREATE TABLE Fixtures (
     match_id        int PRIMARY KEY,
     home_team_id    int,
     away_team_id    int,
@@ -115,7 +115,7 @@ CREATE TABLE Scores (
     full_time_away  int,
     half_time_home  int,
     half_time_away  int,
-    FOREIGN KEY (match_id) REFERENCES Matches (match_id)
+    FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
 CREATE TABLE MatchStatistics (
@@ -134,7 +134,7 @@ CREATE TABLE MatchStatistics (
     home_total_passes    int,
     away_total_passes    int,
     home_possession      float(3,2),
-    FOREIGN KEY (match_id) REFERENCES Matches (match_id)
+    FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
 CREATE TABLE Standings (
