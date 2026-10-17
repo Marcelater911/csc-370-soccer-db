@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS soccer_project;
 CREATE DATABASE soccer_project;
 USE soccer_project;
 
-DROP TABLE IF EXISTS Scorers;
+DROP TABLE IF EXISTS PlayerSeasonStats;
 DROP TABLE IF EXISTS Standings;
 DROP TABLE IF EXISTS MatchStatistics;
 DROP TABLE IF EXISTS Scores;
@@ -152,7 +152,7 @@ CREATE TABLE Standings (
     FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 
-CREATE TABLE Scorers (
+CREATE TABLE PlayerSeasonStats (
     scorer_id int PRIMARY KEY,
     person_id int,
     season_id int,
