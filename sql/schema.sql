@@ -154,13 +154,17 @@ CREATE TABLE Standings (
 
 CREATE TABLE PlayerSeasonStats (
     scorer_id int PRIMARY KEY,
+    team_id int,
     person_id int,
     season_id int,
     goals     int,
     assists   int,
     penalties int,
 
-    UNIQUE (person_id, season_id),
+    UNIQUE (person_id, season_id, team_id),
+    CHECK (goals >= 0 AND assists >= 0 AND penalties >= 0),
+    CHECK (penalties <= goals),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
-    FOREIGN KEY (person_id) REFERENCES Players (person_id)
+    FOREIGN KEY (person_id) REFERENCES Players (person_id),
+    FOREIGN KEY (team_id) REFERENCES Teams (team_id)
 );
