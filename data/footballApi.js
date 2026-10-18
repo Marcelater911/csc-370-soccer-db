@@ -25,6 +25,11 @@ const leaguesUrl = "https://v3.football.api-sports.io/leagues"
 const leaguesCsvPath = path.join(currentDir, "leagues.csv")
 const euLeaguesPath = path.join(currentDir, "eu_leagues.txt")
 
+/* Teams for each league url + path */
+// Ligue 1 season 2023-24
+const teamsUrl = "https://v3.football.api-sports.io/teams?league=61&season=2023"
+const teamsCsvPath = path.join(currentDir, "teams.csv")
+
 const countryList = ["england", "france", "germany", "spain", "italy"]
 
 if(!apiKey){
@@ -108,6 +113,28 @@ const saveJsonToCsv = (jsonData, filePath, type) => {
         ];
 
         fs.writeFileSync(filePath, csvLines.join("\n"));
+    } else if (type === "team") {
+        const headers = ["team_id", "team_name", "code", "founded", "venue_id", "venue_name", "venue_address", "venue_city", "venue_capacity"];
+        const csvLines = [
+            headers.join(","),
+            ...rows.map((row) => {
+                const team = row.team || {};
+                const venue = row.venue || {};
+                return [
+                    team.id,
+                    team.name,
+                    team.code,
+                    team.founded,
+                    venue.id,
+                    venue.name,
+                    venue.address,
+                    venue.city,
+                    venue.capacity
+                ].map(escapeValue).join(",");
+            })
+        ];
+
+        fs.writeFileSync(filePath, csvLines.join("\n"));
     }
 };
 
@@ -169,6 +196,18 @@ export async function saveLeaguesData(outputPath, filterNames) {
     }
 }
 
+/* Teams utility methods */
+export async function saveTeamsData(url, outputPath) {
+    const teamsData = await footballApi(url, apiKey);
+    if (teamsData) {
+        const teams = teamsData.response ?? [];
+        saveJsonToCsv(teams, outputPath, "team");
+        console.log(`Saved ${teams.length} teams to ${outputPath}`);
+    } else {
+        console.error("Error fetching data from API.");
+    }
+}
+
 async function main() {
     /* Save timezone data */
     // await saveTzData(tzOutPath);
@@ -180,6 +219,9 @@ async function main() {
     /* Save leagues data */
     // const euLeagueNames = loadLeagueNames(euLeaguesPath);
     // await saveLeaguesData(leaguesCsvPath, euLeagueNames);
+
+    /* Save teams data */
+    await saveTeamsData(teamsUrl, teamsCsvPath);
 }
 
 main().catch((error) => {
