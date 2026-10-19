@@ -1,0 +1,21 @@
+team_id,team_name,code,founded,venue_id,venue_name,venue_address,venue_city,venue_capacity
+487,Lazio,LAZ,1900,910,Stadio Olimpico,"Viale dei Gladiatori, 2 / Via del Foro Italico",Roma,68530
+489,AC Milan,MIL,1899,907,Stadio Giuseppe Meazza,Via Piccolomini 5,Milano,80018
+490,Cagliari,CAG,1920,12275,Unipol Domus,Via Raimondo Carta Raspi,Cagliari,16416
+492,Napoli,NAP,1904,11904,Stadio Diego Armando Maradona,Pizzale Vincenzo Tecchio,Napoli,60240
+494,Udinese,UDI,1896,20416,Bluenergy Stadium,"Piazza le Repubblica Argentina, 3",Udine,25952
+495,Genoa,GEN,1893,905,Stadio Comunale Luigi Ferraris,"Via Giovanni De Prà, 1",Genova,36703
+496,Juventus,JUV,1897,909,Allianz Stadium,Strada Comunale di Altessano 131,Torino,45666
+497,AS Roma,ROM,1927,910,Stadio Olimpico,"Viale dei Gladiatori, 2 / Via del Foro Italico",Roma,68530
+499,Atalanta,ATA,1907,879,Gewiss Stadium,Viale Giulio Cesare 18,Bergamo,21300
+500,Bologna,BOL,1909,881,Stadio Renato Dall'Ara,"Via Andrea Costa, 174",Bologna,39279
+502,Fiorentina,FIO,1926,902,Stadio Artemio Franchi,Viale Manfredo Fanti 14,Firenze,43147
+503,Torino,TOR,1906,943,Stadio Olimpico Grande Torino,"Corso Sebastopoli 123, Santa Rita",Torino,27958
+504,Hellas Verona,VER,1903,890,Stadio Marc'Antonio Bentegodi,Piazzale Olimpia,Verona,39211
+505,Inter,INT,1908,907,Stadio Giuseppe Meazza,Via Piccolomini 5,Milano,80018
+511,Empoli,EMP,1920,20109,Stadio Carlo Castellani – Computer Gross Arena,Viale delle Olimpiadi,Empoli,16284
+517,Venezia,VEN,1907,948,Stadio Pierluigi Penzo,Isola di Sant&apos;Elena,Venezia,11150
+523,Parma,PAR,1913,921,Stadio Ennio Tardini,"Via Partigiani d&apos;Italia, 1",Parma,22885
+867,Lecce,LEC,1908,911,Stadio Comunale Via del Mare,Viale dello Stadio,Lecce,33876
+895,Como,COM,1907,892,Stadio Giuseppe Sinigaglia,"Via Giuseppe Sinigaglia, 3",Como,13602
+1579,Monza,MON,1912,12086,U-Power Stadium,Via Franco Tognini,Monza,18568

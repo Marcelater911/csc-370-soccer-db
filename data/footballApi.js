@@ -27,8 +27,21 @@ const euLeaguesPath = path.join(currentDir, "eu_leagues.txt")
 
 /* Teams for each league url + path */
 // Ligue 1 season 2023-24
-const teamsUrl = "https://v3.football.api-sports.io/teams?league=61&season=2023"
-const teamsCsvPath = path.join(currentDir, "teams.csv")
+const leagueIds = {
+    "Ligue 2": 62,
+    "Ligue 1": 61,
+    "Premier League": 39,
+    "Bundesliga": 78,
+    "Serie A": 135,
+    "La Liga": 140,
+    "Championship": 40,
+    "2. Bundesliga": 79,
+    "Segunda División": 141,
+    "Serie B": 136
+}
+const seasonYear = 2024
+const teamsUrlBase = "https://v3.football.api-sports.io/teams"
+const teamsCsvDirectory = path.join(currentDir, "teams")
 
 const countryList = ["england", "france", "germany", "spain", "italy"]
 
@@ -36,7 +49,20 @@ if(!apiKey){
     throw new Error("API Key does not exist")
 }
 
+class RateLimitError extends Error {}
+
+// Set once a response reports no remaining calls, so no further request is sent.
+let rateLimitExhausted = null;
+
+const readRemaining = (res, header) => {
+    const value = res.headers.get(header);
+    return value === null ? null : Number(value);
+}
+
 export const footballApi = async (url, apiKey) => {
+    if (rateLimitExhausted) {
+        throw new RateLimitError(`Stopped before calling ${url}: ${rateLimitExhausted}`);
+    }
     try{
         var res = await fetch(url, {
             method: "GET",
@@ -44,12 +70,30 @@ export const footballApi = async (url, apiKey) => {
                 "x-apisports-key": `${apiKey}`
             }
         })
+
+        const perMinuteRemaining = readRemaining(res, "x-ratelimit-remaining");
+        const perDayRemaining = readRemaining(res, "x-ratelimit-requests-remaining");
+        console.log(`Rate limit remaining: ${perMinuteRemaining ?? "?"}/minute, ${perDayRemaining ?? "?"}/day`);
+
+        if (res.status === 429) {
+            rateLimitExhausted = "API responded 429 Too Many Requests";
+            throw new RateLimitError(rateLimitExhausted);
+        }
+        if (perMinuteRemaining === 0) {
+            rateLimitExhausted = "per-minute rate limit reached (X-RateLimit-Remaining is 0)";
+        } else if (perDayRemaining === 0) {
+            rateLimitExhausted = "daily request quota reached (x-ratelimit-requests-remaining is 0)";
+        }
+
         if(!res.ok){
-            throw new Error(`HTTP rror! status ${res.status}`);
+            throw new Error(`HTTP error! status ${res.status}`);
         }
         const data = await res.json();
         return data;
     } catch(error){
+        if (error instanceof RateLimitError) {
+            throw error;
+        }
         return console.error("Error fetching data from the API:", error);
     }
 }
@@ -199,12 +243,35 @@ export async function saveLeaguesData(outputPath, filterNames) {
 /* Teams utility methods */
 export async function saveTeamsData(url, outputPath) {
     const teamsData = await footballApi(url, apiKey);
-    if (teamsData) {
-        const teams = teamsData.response ?? [];
-        saveJsonToCsv(teams, outputPath, "team");
-        console.log(`Saved ${teams.length} teams to ${outputPath}`);
-    } else {
-        console.error("Error fetching data from API.");
+    if (!teamsData) {
+        console.error(`Error fetching data from API: ${url}`);
+        return;
+    }
+    // The API reports problems like plan limits or invalid seasons in `errors` with HTTP 200
+    const errors = teamsData.errors;
+    if (errors && Object.keys(errors).length > 0) {
+        console.error(`API returned errors for ${url}:`, errors);
+        return;
+    }
+    const teams = teamsData.response ?? [];
+    saveJsonToCsv(teams, outputPath, "team");
+    console.log(`Saved ${teams.length} teams to ${outputPath}`);
+}
+
+const toFileName = (name) => name
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_|_$/g, "");
+
+export async function saveAllLeagueTeams(leagues, season, outputDir) {
+    fs.mkdirSync(outputDir, { recursive: true });
+    for (const [leagueName, leagueId] of Object.entries(leagues)) {
+        const params = new URLSearchParams({ league: leagueId, season });
+        const url = `${teamsUrlBase}?${params}`;
+        const outputPath = path.join(outputDir, `${toFileName(leagueName)}_${season}.csv`);
+        await saveTeamsData(url, outputPath);
     }
 }
 
@@ -221,7 +288,7 @@ async function main() {
     // await saveLeaguesData(leaguesCsvPath, euLeagueNames);
 
     /* Save teams data */
-    await saveTeamsData(teamsUrl, teamsCsvPath);
+    // await saveAllLeagueTeams(leagueIds, seasonYear, teamsCsvDirectory);
 }
 
 main().catch((error) => {
