@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS Teams;
 DROP TABLE IF EXISTS Referees;
 DROP TABLE IF EXISTS Stadiums;
 DROP TABLE IF EXISTS Leagues;
+DROP TABLE IF EXISTS Person;
 DROP TABLE IF EXISTS Countries;
 
 CREATE TABLE Countries (
@@ -121,7 +122,7 @@ CREATE TABLE Scores (
     full_time_home int,
     full_time_away int,
     half_time_home int,
-    half_time_away int
+    half_time_away int,
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
