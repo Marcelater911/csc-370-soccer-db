@@ -38,7 +38,6 @@ CREATE TABLE Leagues (
     league_id        int PRIMARY KEY,
     name             varchar(50) NOT NULL,
     country_id       int NOT NULL,
-    num_of_teams     int,
     FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
