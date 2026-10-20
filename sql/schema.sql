@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS Teams;
 DROP TABLE IF EXISTS Referees;
 DROP TABLE IF EXISTS Stadiums;
 DROP TABLE IF EXISTS Leagues;
+DROP TABLE IF EXISTS Person;
 DROP TABLE IF EXISTS Countries;
 
 CREATE TABLE Countries (
@@ -37,7 +38,6 @@ CREATE TABLE Leagues (
     league_id        int PRIMARY KEY,
     name             varchar(50) NOT NULL,
     country_id       int NOT NULL,
-    num_of_teams     int,
     FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
@@ -85,10 +85,13 @@ CREATE TABLE Players (
 );
 
 CREATE TABLE Seasons (
-    season_id int PRIMARY KEY,
-    league_id int,
-    year      char(4),
-    FOREIGN KEY (league_id) REFERENCES Leagues (league_id)
+    season_id        int PRIMARY KEY,
+    league_id        int NOT NULL,
+    start_year       int NOT NULL,
+    end_year         int NOT NULL,
+    num_of_teams     int,
+    FOREIGN KEY (league_id) REFERENCES Leagues (league_id),
+    CONSTRAINT uk_league_season UNIQUE (league_id, start_year)
 );
 
 CREATE TABLE Fixtures (
@@ -111,10 +114,10 @@ CREATE TABLE Fixtures (
 CREATE TABLE Scores (
     score_id        int PRIMARY KEY,
     match_id        int UNIQUE,
-    full_time_home  int,
-    full_time_away  int,
-    half_time_home  int,
-    half_time_away  int,
+    full_time_home int,
+    full_time_away int,
+    half_time_home int,
+    half_time_away int,
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
