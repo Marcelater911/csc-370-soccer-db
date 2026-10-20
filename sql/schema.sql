@@ -116,18 +116,12 @@ CREATE TABLE Fixtures (
 );
 
 CREATE TABLE Scores (
-    score_id       int PRIMARY KEY,
-    match_id       int,
+    score_id        int PRIMARY KEY,
+    match_id        int UNIQUE,
     full_time_home int,
     full_time_away int,
     half_time_home int,
     half_time_away int
-    score_id        int PRIMARY KEY,
-    match_id        int UNIQUE,
-    full_time_home  int,
-    full_time_away  int,
-    half_time_home  int,
-    half_time_away  int,
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
