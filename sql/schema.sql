@@ -89,7 +89,6 @@ CREATE TABLE Seasons (
     league_id        int NOT NULL,
     start_year       int NOT NULL,
     end_year         int NOT NULL,
-    season_label     varchar(10) NOT NULL, -- e.g., '2024/25'
     num_of_teams     int,
     FOREIGN KEY (league_id) REFERENCES Leagues (league_id),
     CONSTRAINT uk_league_season UNIQUE (league_id, start_year)
