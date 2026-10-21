@@ -9,53 +9,30 @@ DROP TABLE IF EXISTS Scores;
 DROP TABLE IF EXISTS Fixtures;
 DROP TABLE IF EXISTS Seasons;
 DROP TABLE IF EXISTS Players;
-DROP TABLE IF EXISTS Coaches;
+DROP TABLE IF EXISTS Person;
 DROP TABLE IF EXISTS Teams;
-DROP TABLE IF EXISTS Referees;
 DROP TABLE IF EXISTS Stadiums;
 DROP TABLE IF EXISTS Leagues;
-DROP TABLE IF EXISTS Person;
 DROP TABLE IF EXISTS Countries;
 
 CREATE TABLE Countries (
     country_id int PRIMARY KEY,
-    name       varchar(50) NOT NULL,
-    flag_url   varchar(255)
-);
-
-CREATE TABLE Person (
-    person_id INT PRIMARY KEY,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    date_of_birth DATE,
-    country_id INT,
-
-    FOREIGN KEY (country_id)
-        REFERENCES Countries(country_id)
+    name       varchar(40) NOT NULL,
+    flag_url   varchar(100)
 );
 
 CREATE TABLE Leagues (
     league_id        int PRIMARY KEY,
-    name             varchar(50) NOT NULL,
+    name             varchar(40) NOT NULL,
     country_id       int NOT NULL,
     FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
 CREATE TABLE Stadiums (
     stadium_id int PRIMARY KEY,
-    name       varchar(50) NOT NULL,
-    location   varchar(50),
+    name       varchar(60) NOT NULL,
+    location   varchar(40),
     capacity   int
-);
-
-CREATE TABLE Referees (
-    person_id int PRIMARY KEY,
-
-    FOREIGN KEY(person_id) 
-        REFERENCES Person(person_id)
-        ON DELETE CASCADE
-        
-    
 );
 
 CREATE TABLE Teams (
@@ -68,20 +45,24 @@ CREATE TABLE Teams (
     FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id)
 );
 
-CREATE TABLE Coaches (
-    person_id   int PRIMARY KEY,
-    
-    team_id    int UNIQUE,
-    FOREIGN KEY (person_id) REFERENCES Person(person_id) ON DELETE CASCADE,
-    FOREIGN KEY (team_id) REFERENCES Teams(team_id)
+CREATE TABLE Person (
+    person_id     int PRIMARY KEY,
+    team_id       int,
+    first_name    varchar(50) NOT NULL,
+    last_name     varchar(50) NOT NULL,
+    date_of_birth date,
+    country_id    int,
+    is_coach      boolean,
+    FOREIGN KEY (team_id) REFERENCES Teams (team_id),
+    FOREIGN KEY (country_id) REFERENCES Countries (country_id)
 );
 
 CREATE TABLE Players (
     person_id     int PRIMARY KEY,
-    team_id       int,
     position      varchar(50),
-    FOREIGN KEY (person_id) REFERENCES Person (person_id) ON DELETE CASCADE,
-    FOREIGN KEY (team_id) REFERENCES Teams(team_id)
+    age           int,
+    jersey_num    int,
+    FOREIGN KEY (person_id) REFERENCES Person (person_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Seasons (
@@ -89,7 +70,6 @@ CREATE TABLE Seasons (
     league_id        int NOT NULL,
     start_year       int NOT NULL,
     end_year         int NOT NULL,
-    num_of_teams     int,
     FOREIGN KEY (league_id) REFERENCES Leagues (league_id),
     CONSTRAINT uk_league_season UNIQUE (league_id, start_year)
 );
@@ -101,19 +81,17 @@ CREATE TABLE Fixtures (
     season_id       int,
     stadium_id      int,
     winner_id       int,
-    match_referee_id int,
+    match_referee   varchar(40),
     utc_kickoff     date,
     FOREIGN KEY (home_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (away_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
     FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id),
-    FOREIGN KEY (winner_id) REFERENCES Teams (team_id),
-    FOREIGN KEY (match_referee_id) REFERENCES Referees (person_id)
+    FOREIGN KEY (winner_id) REFERENCES Teams (team_id)
 );
 
 CREATE TABLE Scores (
-    score_id        int PRIMARY KEY,
-    match_id        int UNIQUE,
+    match_id       int PRIMARY KEY,
     full_time_home int,
     full_time_away int,
     half_time_home int,
@@ -122,8 +100,7 @@ CREATE TABLE Scores (
 );
 
 CREATE TABLE MatchStatistics (
-    statistic_id        int PRIMARY KEY,
-    match_id             int UNIQUE,
+    match_id             int PRIMARY KEY,
     home_total_shots     int,
     away_total_shots     int,
     home_shot_accuracy   float(3,2),
@@ -152,22 +129,22 @@ CREATE TABLE Standings (
     promotion       boolean,
     relegation      boolean,
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
-    FOREIGN KEY (team_id) REFERENCES Teams(team_id)
+    FOREIGN KEY (team_id) REFERENCES Teams (team_id)
 );
 
 CREATE TABLE PlayerSeasonStats (
     scorer_id int PRIMARY KEY,
-    team_id int,
-    person_id int,
+    player_id int,
     season_id int,
+    team_id   int,
     goals     int,
     assists   int,
     penalties int,
 
-    UNIQUE (person_id, season_id, team_id),
+    UNIQUE (player_id, season_id, team_id),
     CHECK (goals >= 0 AND assists >= 0 AND penalties >= 0),
     CHECK (penalties <= goals),
+    FOREIGN KEY (player_id) REFERENCES Players (person_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
-    FOREIGN KEY (person_id) REFERENCES Players (person_id),
     FOREIGN KEY (team_id) REFERENCES Teams (team_id)
 );
