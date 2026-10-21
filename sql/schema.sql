@@ -16,8 +16,8 @@ DROP TABLE IF EXISTS Leagues;
 DROP TABLE IF EXISTS Countries;
 
 CREATE TABLE Countries (
-    country_id int PRIMARY KEY,
-    name       varchar(40) NOT NULL,
+    country_id int AUTO_INCREMENT PRIMARY KEY,
+    name       varchar(40) NOT NULL UNIQUE,
     flag_url   varchar(100)
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE Leagues (
 CREATE TABLE Stadiums (
     stadium_id int PRIMARY KEY,
     name       varchar(60) NOT NULL,
-    location   varchar(40),
+    city       varchar(40),
     capacity   int
 );
 
