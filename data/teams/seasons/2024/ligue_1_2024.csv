@@ -1,0 +1,20 @@
+team_id,team_name,code,founded,venue_id,venue_name,venue_address,venue_city,venue_capacity
+77,Angers,ANG,1919,634,Stade Raymond-Kopa,"73, boulevard Pierre de Coubertin",Angers,19000
+79,Lille,LIL,1944,22783,Decathlon Arena - Stade Pierre-Mauroy,"261, Boulevard de Tournai, l&apos;Hôtel de Ville",Villeneuve d&apos;Ascq,50083
+80,Lyon,LYO,1950,666,Groupama Stadium,Chemin du Montout,Décines-Charpieu,61556
+81,Marseille,MAR,1899,12678,Stade Orange Vélodrome,"3, boulevard Michelet",Marseille,67394
+82,Montpellier,MON,1974,20107,Stade de la Mosson-Mondial 98,Avenue de Heidelberg,Montpellier,32939
+83,Nantes,NAN,1943,662,Stade de la Beaujoire - Louis Fonteneau,"5, boulevard de la Beaujoire",Nantes,38285
+84,Nice,NIC,1904,663,Allianz Riviera,Boulevard des Jardiniers,Nice,35624
+85,Paris Saint Germain,PSG,1970,671,Parc des Princes,"24, rue du Commandant Guilbaud",Paris,47929
+91,Monaco,MON,1919,20470,Stade Louis-II,"7, avenue des Castelans",Monaco,18523
+93,Reims,REI,1909,22707,Stade Auguste-Delaune,"33, Chaussée Bocquaine",Reims,21684
+94,Rennes,REN,1901,680,Roazhon Park,"111, route de Lorient",Rennes,31127
+95,Strasbourg,STR,1906,681,Stade de la Meinau,"12, rue de l&apos;Extenwoerth",Strasbourg,26109
+96,Toulouse,TOU,1937,682,Stadium de Toulouse,"1, allée Gabriel Biènés",Toulouse,33150
+106,Stade Brestois 29,BRE,1950,641,Stade Francis-Le Blé,"26, rue de Quimper",Brest,15931
+108,Auxerre,AUX,1905,636,Stade de l'Abbé Deschamps,Route de Vaux,Auxerre,23467
+111,Le Havre,HAV,1872,652,Stade Océane,Boulevard de Léningrad,Le Havre,25178
+112,Metz,MET,1932,658,Stade Saint-Symphorien,"3, allée Saint-Symphorien",Longeville-lès-Metz,30000
+116,Lens,LEN,1906,654,Stade Bollaert-Delelis,"83, rue Maurice-Carton",Lens,41233
+1063,Saint Etienne,ETI,1920,676,Stade Geoffroy-Guichard,"14, rue Pierre et Paul Guichard",Saint-Ètienne,41965

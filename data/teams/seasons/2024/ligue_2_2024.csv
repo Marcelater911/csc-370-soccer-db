@@ -1,0 +1,20 @@
+team_id,team_name,code,founded,venue_id,venue_name,venue_address,venue_city,venue_capacity
+87,Amiens,AMI,1901,633,Stade Crédit Agricole de la Licorne,"25, rue du Chapître",Amiens,12999
+88,Caen,CAE,1897,642,Stade Michel d'Ornano,Boulevard Georges Pompidou,Caen,20453
+90,Guingamp,GUI,1912,650,Stade du Roudourou,Rue du Manoir 11,Guingamp,19003
+97,Lorient,LOR,1926,21430,Stade du Moustoir - Yves Allainmat,"11, rue Jean Le Coutaller",Lorient,18970
+98,Ajaccio,AJA,1910,21428,Stade Michel-Moretti,"Ancienne route de Sartène, Zone Industrielle du Vazzio",Ajaccio,10660
+99,Clermont Foot,CLE,1990,21429,Stade Gabriel-Montpied,Rue Adrien-Mabut,Clermont-Ferrand,13576
+101,Grenoble,GRE,1917,649,Stade des Alpes,Avenue de Valmy,Grenoble,20068
+104,RED Star FC 93,STA,1897,673,Stade de Paris (Stade Bauer),"92, rue du Docteur Bauer",Saint-Ouen,10000
+110,Estac Troyes,TRO,1986,684,Stade de l'Aube,"42, avenue Robert Schuman",Troyes,21877
+112,Metz,MET,1932,658,Stade Saint-Symphorien,"3, allée Saint-Symphorien",Longeville-lès-Metz,30000
+114,Paris FC,PAR,1969,12585,Stade Charléty,99 Boulevard Kellermann,Paris,20000
+433,Laval,LAV,1902,651,Stade Francis Le Basser,Avenue Pierre de Coubertin,Laval,18607
+1297,PAU,PAU,1904,11898,Stade Nouste Camp,Chemin de l&apos;Aviation (Larribau),Bizanos,4031
+1299,Boulogne,BOU,1898,639,Stade de la Libération,Boulevard Eurvin,Boulogne-sur-Mer,15242
+1301,Rodez,ROD,1929,675,Stade Paul Lignon,"2, rue Vieussens",Rodez,5996
+1304,Dunkerque,DUN,0,646,Stade Marcel-Tribut,Avenue de Rosendaël,Dunkerque,4933
+1305,Bastia,BAS,1905,1977,Stade Armand-Césari,Route du Stade,Furiani,17000
+3012,Annecy,,1927,1979,Parc des Sports,Rue Pierre de Coubertin,Annecy,15660
+3200,Martigues,MAR,1921,2106,Stade Francis Turcan,"31, chemin de Paradis",Martigues,11500

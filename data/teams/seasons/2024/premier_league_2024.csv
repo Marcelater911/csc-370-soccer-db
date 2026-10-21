@@ -1,0 +1,21 @@
+team_id,team_name,code,founded,venue_id,venue_name,venue_address,venue_city,venue_capacity
+33,Manchester United,MUN,1878,556,Old Trafford,Sir Matt Busby Way,Manchester,76212
+34,Newcastle,NEW,1892,562,St. James' Park,St. James&apos; Street,Newcastle upon Tyne,52758
+35,Bournemouth,BOU,1899,504,Vitality Stadium,"Dean Court, Kings Park","Bournemouth, Dorset",12000
+36,Fulham,FUL,1879,535,Craven Cottage,Stevenage Road,London,29589
+39,Wolves,WOL,1877,600,Molineux Stadium,Waterloo Road,"Wolverhampton, West Midlands",34624
+40,Liverpool,LIV,1892,550,Anfield,Anfield Road,Liverpool,61276
+41,Southampton,SOU,1885,585,St. Mary's Stadium,Britannia Road,"Southampton, Hampshire",32689
+42,Arsenal,ARS,1886,494,Emirates Stadium,Hornsey Road,London,60383
+45,Everton,EVE,1878,22033,Hill Dickinson Stadium,"35 Regent Road, Bramley-Moore Dock, Vauxhall","Liverpool, Merseyside",52888
+46,Leicester,LEI,1884,547,King Power Stadium,Filbert Way,"Leicester, Leicestershire",34310
+47,Tottenham,TOT,1882,593,Tottenham Hotspur Stadium,"Bill Nicholson Way, 748 High Road",London,62850
+48,West Ham,WES,1895,598,London Stadium,"Marshgate Lane, Stratford",London,64472
+49,Chelsea,CHE,1905,519,Stamford Bridge,Fulham Road,London,41841
+50,Manchester City,MCI,1880,555,Etihad Stadium,Rowsley Street,Manchester,55097
+51,Brighton,BRI,1901,508,American Express Stadium,Village Way,"Falmer, East Sussex",31872
+52,Crystal Palace,CRY,1861,525,Selhurst Park,Holmesdale Road,London,26309
+55,Brentford,BRE,1889,10503,Gtech Community Stadium,"166 Lionel Rd N, Brentford","Brentford, Middlesex",17250
+57,Ipswich,IPS,1878,545,Portman Road,Portman Road,"Ipswich, Suffolk",30311
+65,Nottingham Forest,NOT,1865,566,The City Ground,Pavilion Road,"Nottingham, Nottinghamshire",30576
+66,Aston Villa,AST,1874,495,Villa Park,Trinity Road,Birmingham,42824

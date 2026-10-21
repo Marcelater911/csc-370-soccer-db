@@ -1,0 +1,21 @@
+team_id,team_name,code,founded,venue_id,venue_name,venue_address,venue_city,venue_capacity
+529,Barcelona,BAR,1899,19939,Camp Nou,"Les Corts, 08028",Barcelona,55926
+530,Atletico Madrid,ATM,1903,19217,Estádio Cívitas Metropolitano,Rosas,Madrid,70460
+531,Athletic Club,BIL,1898,1460,San Mamés Barria,Rafael Moreno Pitxitxi Kalea,Bilbao,53289
+532,Valencia,VAL,1919,1497,Estadio de Mestalla,Avenida de Suecia,Valencia,55000
+533,Villarreal,VIL,1923,1498,Estadio de la Cerámica,Plaza Labrador,Villarreal,24500
+534,Las Palmas,PAL,1949,1481,Estadio de Gran Canaria,Avenida Pío XII 29,Las Palmas de Gran Canaria,32392
+536,Sevilla,SEV,1890,1494,Estadio Ramón Sánchez Pizjuán,Avenida de Eduardo Dato,Sevilla,48649
+537,Leganes,LEG,1928,1464,Estadio Municipal de Butarque,Calle Arquitectura,Leganés,12450
+538,Celta Vigo,CEL,1923,22784,Estadio Abanca-Balaídos,Avenida de Balaídos,Vigo,24791
+540,Espanyol,ESP,1900,20421,Stage Front Stadium,Avenida Baix Llobregat 100,Cornella de Llobregat,40423
+541,Real Madrid,REA,1902,1456,Estadio Santiago Bernabéu,"Avenida de Concha Espina 1, Chamartín",Madrid,85454
+542,Alaves,ALA,1921,1470,Estadio de Mendizorroza,Paseo de Cervantes,Vitoria-Gasteiz,19840
+543,Real Betis,BET,1907,22785,Estadio La Cartuja de Sevilla,"Edificio Suroeste, Puerta E",Sevilla,72000
+546,Getafe,GET,1983,20422,Estadio Coliseum,Avenida de Teresa de Calcuta,Getafe,17393
+547,Girona,GIR,1930,1478,Estadi Municipal de Montilivi,Avenida Montlivi 141,Girona,14500
+548,Real Sociedad,RSO,1909,1491,Reale Arena,Paseo de Anoeta 1,Donostia-San Sebastián,40000
+720,Valladolid,VAL,1928,1492,Estadio Municipal José Zorrilla,Avenida del Mundial 82,Valladolid,26512
+727,Osasuna,OSA,1920,1486,Estadio El Sadar,Carretera El Sadar,Iruñea,23576
+728,Rayo Vallecano,RAY,1924,1488,Estadio de Vallecas,Calle Payaso Fofó,Madrid,15500
+798,Mallorca,MAL,1916,19940,Estadi Mallorca Son Moix,Camí dels Reis,Palma de Mallorca,23142
