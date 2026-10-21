@@ -1,0 +1,201 @@
+name,league_name,venue_name,year_established
+Manchester United,Premier League,Old Trafford,1878
+Newcastle,Premier League,St. James' Park,1892
+Bournemouth,Premier League,Vitality Stadium,1899
+Fulham,Premier League,Craven Cottage,1879
+Wolves,Premier League,Molineux Stadium,1877
+Liverpool,Premier League,Anfield,1892
+Southampton,Premier League,St. Mary's Stadium,1885
+Arsenal,Premier League,Emirates Stadium,1886
+Everton,Premier League,Hill Dickinson Stadium,1878
+Leicester,Premier League,King Power Stadium,1884
+Tottenham,Premier League,Tottenham Hotspur Stadium,1882
+West Ham,Premier League,London Stadium,1895
+Chelsea,Premier League,Stamford Bridge,1905
+Manchester City,Premier League,Etihad Stadium,1880
+Brighton,Premier League,American Express Stadium,1901
+Crystal Palace,Premier League,Selhurst Park,1861
+Brentford,Premier League,Gtech Community Stadium,1889
+Ipswich,Premier League,Portman Road,1878
+Nottingham Forest,Premier League,The City Ground,1865
+Aston Villa,Premier League,Villa Park,1874
+Watford,Championship,Vicarage Road,1881
+Cardiff,Championship,Cardiff City Stadium,1889
+Burnley,Championship,Turf Moor,1882
+Bristol City,Championship,Ashton Gate Stadium,1894
+Millwall,Championship,The Den,1885
+Preston,Championship,Deepdale,1863
+West Brom,Championship,The Hawthorns,1878
+Sheffield Utd,Championship,Bramall Lane,1889
+Leeds,Championship,Elland Road,1919
+Hull City,Championship,The MKM Stadium,1904
+Blackburn,Championship,Ewood Park,1875
+Derby,Championship,Pride Park Stadium,1884
+Middlesbrough,Championship,Riverside Stadium,1876
+Norwich,Championship,Carrow Road,1902
+QPR,Championship,MATRADE Loftus Road,1885
+Sheffield Wednesday,Championship,Hillsborough,1867
+Stoke City,Championship,bet365 Stadium,1868
+Swansea,Championship,Swansea.com Stadium,1912
+Sunderland,Championship,Stadium of Light,1879
+Oxford United,Championship,The Kassam Stadium,1893
+Coventry,Championship,The Coventry Building Society Arena,1883
+Portsmouth,Championship,Fratton Park,1898
+Plymouth,Championship,Home Park,1886
+Luton,Championship,Kenilworth Road,1885
+Barcelona,La Liga,Camp Nou,1899
+Atletico Madrid,La Liga,Estádio Cívitas Metropolitano,1903
+Athletic Club,La Liga,San Mamés Barria,1898
+Valencia,La Liga,Estadio de Mestalla,1919
+Villarreal,La Liga,Estadio de la Cerámica,1923
+Las Palmas,La Liga,Estadio de Gran Canaria,1949
+Sevilla,La Liga,Estadio Ramón Sánchez Pizjuán,1890
+Leganes,La Liga,Estadio Municipal de Butarque,1928
+Celta Vigo,La Liga,Estadio Abanca-Balaídos,1923
+Espanyol,La Liga,Stage Front Stadium,1900
+Real Madrid,La Liga,Estadio Santiago Bernabéu,1902
+Alaves,La Liga,Estadio de Mendizorroza,1921
+Real Betis,La Liga,Estadio La Cartuja de Sevilla,1907
+Getafe,La Liga,Estadio Coliseum,1983
+Girona,La Liga,Estadi Municipal de Montilivi,1930
+Real Sociedad,La Liga,Reale Arena,1909
+Valladolid,La Liga,Estadio Municipal José Zorrilla,1928
+Osasuna,La Liga,Estadio El Sadar,1920
+Rayo Vallecano,La Liga,Estadio de Vallecas,1924
+Mallorca,La Liga,Estadi Mallorca Son Moix,1916
+Malaga,Segunda División,Estadio La Rosaleda,1948
+Levante,Segunda División,Estadio Ciudad de Valencia,1909
+Deportivo La Coruna,Segunda División,Estadio Abanca-Riazor,1906
+Eibar,Segunda División,Estadio Municipal de Ipurúa,1940
+Cordoba,Segunda División,Estadio Nuevo Arcángel,1954
+Granada CF,Segunda División,Estadio Nuevo Los Cármenes,1931
+Oviedo,Segunda División,Estadio Nuevo Carlos Tartiere,1926
+Tenerife,Segunda División,Estadio Heliodoro Rodríguez Lopéz,1922
+Albacete,Segunda División,Estadio Carlos Belmonte,1940
+Almeria,Segunda División,Power Horse Stadium – Estadio de los Juegos Mediterráneos,1989
+Cadiz,Segunda División,JP Financial Estadio,1910
+Huesca,Segunda División,Estadio El Alcoraz,1922
+Sporting Gijon,Segunda División,Estadio Municipal El Molinón,1905
+Zaragoza,Segunda División,Estadio de la Romareda,1932
+Elche,Segunda División,Estadio Manuel Martínez Valero,1923
+Mirandes,Segunda División,Estadio Municipal de Anduva,1927
+Racing Santander,Segunda División,Campos de Sport de El Sardinero,1913
+Castellón,Segunda División,Nou Estadi Castalia,1922
+FC Cartagena,Segunda División,Estadio Municipal Cartagonova,1995
+Racing Ferrol,Segunda División,Estadio Municipal de A Malata,1919
+Burgos,Segunda División,Estadio Municipal de El Plantío,1922
+Eldense,Segunda División,Estadio Municipal Nuevo Pepico Amat,1921
+Bayern München,Bundesliga,Allianz Arena,1900
+SC Freiburg,Bundesliga,Europa-Park Stadion,1904
+VfL Wolfsburg,Bundesliga,Volkswagen Arena,1945
+Werder Bremen,Bundesliga,Weserstadion,1899
+Borussia Mönchengladbach,Bundesliga,BORUSSIA-PARK,1900
+FSV Mainz 05,Bundesliga,MEWA ARENA,1905
+Borussia Dortmund,Bundesliga,SIGNAL IDUNA PARK,1909
+1899 Hoffenheim,Bundesliga,PreZero Arena,1899
+Bayer Leverkusen,Bundesliga,BayArena,1904
+Eintracht Frankfurt,Bundesliga,Deutsche Bank Park,1899
+FC Augsburg,Bundesliga,WWK Arena,1907
+VfB Stuttgart,Bundesliga,MHPArena,1893
+RB Leipzig,Bundesliga,Red Bull Arena,2009
+VfL Bochum,Bundesliga,Vonovia Ruhrstadion,1848
+1. FC Heidenheim,Bundesliga,Voith-Arena,1946
+Union Berlin,Bundesliga,Stadion An der Alten Försterei,1966
+FC St. Pauli,Bundesliga,Millerntor-Stadion,1910
+Holstein Kiel,Bundesliga,Holstein-Stadion,1900
+SV Elversberg,2. Bundesliga,URSAPHARM-Arena an der Kaiserlinde,1907
+Fortuna Düsseldorf,2. Bundesliga,Düsseldorf Arena,1895
+Hertha BSC,2. Bundesliga,Olympiastadion Berlin,1892
+Hannover 96,2. Bundesliga,Heinz von Heiden-Arena,1896
+1. FC Nürnberg,2. Bundesliga,Max-Morlock-Stadion,1900
+FC Schalke 04,2. Bundesliga,VELTINS-Arena,1904
+Hamburger SV,2. Bundesliga,Volksparkstadion,1887
+SSV Jahn Regensburg,2. Bundesliga,Jahnstadion Regensburg,2000
+SpVgg Greuther Fürth,2. Bundesliga,Sportpark Ronhof Thomas Sommer,1903
+1. FC Magdeburg,2. Bundesliga,MDCC-Arena,1965
+SV Darmstadt 98,2. Bundesliga,Merck-Stadion am Böllenfalltor,1898
+SC Paderborn 07,2. Bundesliga,Home Deluxe Arena,1907
+1. FC Köln,2. Bundesliga,RheinEnergieSTADION,1948
+Eintracht Braunschweig,2. Bundesliga,Eintracht-Stadion,1895
+1. FC Kaiserslautern,2. Bundesliga,Fritz-Walter-Stadion,1900
+Karlsruher SC,2. Bundesliga,BBBank Wildpark,1898
+Preußen Münster,2. Bundesliga,Preußen-Stadion,1906
+FC Saarbrücken,,Stadion Ludwigspark,1903
+SSV Ulm 1846,2. Bundesliga,Donaustadion,1846
+Lazio,Serie A,Stadio Olimpico,1900
+AC Milan,Serie A,Stadio Giuseppe Meazza,1899
+Cagliari,Serie A,Unipol Domus,1920
+Napoli,Serie A,Stadio Diego Armando Maradona,1904
+Udinese,Serie A,Bluenergy Stadium,1896
+Genoa,Serie A,Stadio Comunale Luigi Ferraris,1893
+Juventus,Serie A,Allianz Stadium,1897
+AS Roma,Serie A,Stadio Olimpico,1927
+Atalanta,Serie A,Gewiss Stadium,1907
+Bologna,Serie A,Stadio Renato Dall'Ara,1909
+Fiorentina,Serie A,Stadio Artemio Franchi,1926
+Torino,Serie A,Stadio Olimpico Grande Torino,1906
+Hellas Verona,Serie A,Stadio Marc'Antonio Bentegodi,1903
+Inter,Serie A,Stadio Giuseppe Meazza,1908
+Empoli,Serie A,Stadio Carlo Castellani – Computer Gross Arena,1920
+Venezia,Serie A,Stadio Pierluigi Penzo,1907
+Parma,Serie A,Stadio Ennio Tardini,1913
+Lecce,Serie A,Stadio Comunale Via del Mare,1908
+Como,Serie A,Stadio Giuseppe Sinigaglia,1907
+Monza,Serie A,U-Power Stadium,1912
+Sassuolo,Serie B,MAPEI Stadium - Città del Tricolore,1922
+Sampdoria,Serie B,Stadio Comunale Luigi Ferraris,1946
+Bari,Serie B,Stadio Comunale San Nicola,1908
+Cesena,Serie B,Orogel Stadium-Dino Manuzzi,1940
+Cittadella,Serie B,Stadio Pier Cesare Tombolato,1973
+Frosinone,Serie B,Stadio Benito Stirpe,1928
+Salernitana,Serie B,Stadio Arechi,2011
+Spezia,Serie B,Stadio Alberto Picco,1906
+Brescia,Serie B,Stadio Mario Rigamonti,1911
+Cremonese,Serie B,Stadio Giovanni Zini,1903
+Palermo,Serie B,Stadio Renzo Barbera,1900
+Pisa,Serie B,Arena Garibaldi - Stadio Romeo Anconetani,1909
+Juve Stabia,Serie B,Stadio Comunale Romeo Menti,1907
+Reggiana,Serie B,MAPEI Stadium - Città del Tricolore,1919
+Modena,Serie B,Stadio Alberto Braglia,1912
+Sudtirol,Serie B,Stadio Marco Druso,1974
+Carrarese,Serie B,Stadio dei Marmi,
+Catanzaro,Serie B,Stadio Nicola Ceravolo,1929
+Mantova,Serie B,Stadio Danilo Martelli,1906
+Cosenza,Serie B,Stadio San Vito-Luigi Marulla,1914
+Angers,Ligue 1,Stade Raymond-Kopa,1919
+Lille,Ligue 1,Decathlon Arena - Stade Pierre-Mauroy,1944
+Lyon,Ligue 1,Groupama Stadium,1950
+Marseille,Ligue 1,Stade Orange Vélodrome,1899
+Montpellier,Ligue 1,Stade de la Mosson-Mondial 98,1974
+Nantes,Ligue 1,Stade de la Beaujoire - Louis Fonteneau,1943
+Nice,Ligue 1,Allianz Riviera,1904
+Paris Saint Germain,Ligue 1,Parc des Princes,1970
+Monaco,Ligue 1,Stade Louis-II,1919
+Reims,Ligue 1,Stade Auguste-Delaune,1909
+Rennes,Ligue 1,Roazhon Park,1901
+Strasbourg,Ligue 1,Stade de la Meinau,1906
+Toulouse,Ligue 1,Stadium de Toulouse,1937
+Stade Brestois 29,Ligue 1,Stade Francis-Le Blé,1950
+Auxerre,Ligue 1,Stade de l'Abbé Deschamps,1905
+Le Havre,Ligue 1,Stade Océane,1872
+Metz,Ligue 2,Stade Saint-Symphorien,1932
+Lens,Ligue 1,Stade Bollaert-Delelis,1906
+Saint Etienne,Ligue 1,Stade Geoffroy-Guichard,1920
+Amiens,Ligue 2,Stade Crédit Agricole de la Licorne,1901
+Caen,Ligue 2,Stade Michel d'Ornano,1897
+Guingamp,Ligue 2,Stade du Roudourou,1912
+Lorient,Ligue 2,Stade du Moustoir - Yves Allainmat,1926
+Ajaccio,Ligue 2,Stade Michel-Moretti,1910
+Clermont Foot,Ligue 2,Stade Gabriel-Montpied,1990
+Grenoble,Ligue 2,Stade des Alpes,1917
+RED Star FC 93,Ligue 2,Stade de Paris (Stade Bauer),1897
+Estac Troyes,Ligue 2,Stade de l'Aube,1986
+Paris FC,Ligue 2,Stade Charléty,1969
+Laval,Ligue 2,Stade Francis Le Basser,1902
+PAU,Ligue 2,Stade Nouste Camp,1904
+Boulogne,,Stade de la Libération,1898
+Rodez,Ligue 2,Stade Paul Lignon,1929
+Dunkerque,Ligue 2,Stade Marcel-Tribut,0
+Bastia,Ligue 2,Stade Armand-Césari,1905
+Annecy,Ligue 2,Parc des Sports,1927
+Martigues,Ligue 2,Stade Francis Turcan,1921
