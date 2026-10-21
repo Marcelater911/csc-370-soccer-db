@@ -16,28 +16,29 @@ DROP TABLE IF EXISTS Leagues;
 DROP TABLE IF EXISTS Countries;
 
 CREATE TABLE Countries (
-    country_id int PRIMARY KEY,
-    name       varchar(40) NOT NULL,
+    country_id int AUTO_INCREMENT PRIMARY KEY,
+    name       varchar(40) NOT NULL UNIQUE,
     flag_url   varchar(100)
 );
 
 CREATE TABLE Leagues (
-    league_id        int PRIMARY KEY,
+    league_id        int AUTO_INCREMENT PRIMARY KEY,
     name             varchar(40) NOT NULL,
     country_id       int NOT NULL,
-    FOREIGN KEY (country_id) REFERENCES Countries (country_id)
+    FOREIGN KEY (country_id) REFERENCES Countries (country_id),
+    CONSTRAINT uk_league_name_country UNIQUE (name, country_id)
 );
 
 CREATE TABLE Stadiums (
-    stadium_id int PRIMARY KEY,
-    name       varchar(60) NOT NULL,
-    location   varchar(40),
+    stadium_id int AUTO_INCREMENT PRIMARY KEY,
+    name       varchar(60) NOT NULL UNIQUE,
+    city       varchar(40),
     capacity   int
 );
 
 CREATE TABLE Teams (
-    team_id          int PRIMARY KEY,
-    name             varchar(50) NOT NULL,
+    team_id          int AUTO_INCREMENT PRIMARY KEY,
+    name             varchar(50) NOT NULL UNIQUE,
     league_id        int,
     stadium_id       int,
     year_established int,
@@ -66,7 +67,7 @@ CREATE TABLE Players (
 );
 
 CREATE TABLE Seasons (
-    season_id        int PRIMARY KEY,
+    season_id        int AUTO_INCREMENT PRIMARY KEY,
     league_id        int NOT NULL,
     start_year       int NOT NULL,
     end_year         int NOT NULL,
@@ -83,6 +84,7 @@ CREATE TABLE Fixtures (
     winner_id       int,
     match_referee   varchar(40),
     utc_kickoff     date,
+    CHECK (home_team_id <> away_team_id),
     FOREIGN KEY (home_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (away_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
@@ -118,10 +120,11 @@ CREATE TABLE MatchStatistics (
 );
 
 CREATE TABLE Standings (
-    standing_id     int PRIMARY KEY,
+    standing_id     int AUTO_INCREMENT PRIMARY KEY,
     season_id       int,
     team_id         int,
     position        int,
+    matches_played  int,
     wins            int,
     losses          int,
     draws           int,
@@ -129,7 +132,8 @@ CREATE TABLE Standings (
     promotion       boolean,
     relegation      boolean,
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
-    FOREIGN KEY (team_id) REFERENCES Teams (team_id)
+    FOREIGN KEY (team_id) REFERENCES Teams (team_id),
+    CONSTRAINT uk_season_team UNIQUE (season_id, team_id)
 );
 
 CREATE TABLE PlayerSeasonStats (
