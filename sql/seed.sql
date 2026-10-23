@@ -3,7 +3,7 @@ USE soccer_project;
 
 -- Countries (country_id is assigned by AUTO_INCREMENT)
 INSERT INTO Countries (name, flag_url) VALUES
-('England', 'https://media.api-sports.io/flags/gb-eng.svg'),
+('Portugal', 'https://media.api-sports.io/flags/gb-eng.svg'),
 ('Spain', 'https://media.api-sports.io/flags/es.svg'),
 ('Germany', 'https://media.api-sports.io/flags/de.svg'),
 ('Italy', 'https://media.api-sports.io/flags/it.svg'),
