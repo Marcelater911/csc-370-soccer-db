@@ -77,19 +77,18 @@ CREATE TABLE Seasons (
 
 CREATE TABLE Fixtures (
     match_id        int PRIMARY KEY,
-    home_team_id    int,
-    away_team_id    int,
+    home_team_id    int not NULL,
+    away_team_id    int not NULL,
     season_id       int,
     stadium_id      int,
-    winner_id       int,
     match_referee   varchar(40),
-    utc_kickoff     date,
+    utc_kickoff     datetime,
     CHECK (home_team_id <> away_team_id),
     FOREIGN KEY (home_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (away_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
     FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id),
-    FOREIGN KEY (winner_id) REFERENCES Teams (team_id)
+    CONSTRAINT uk_fixture UNIQUE (season_id, home_team_id, away_team_id)
 );
 
 CREATE TABLE Scores (
@@ -97,7 +96,10 @@ CREATE TABLE Scores (
     full_time_home int,
     full_time_away int,
     half_time_home int,
-    half_time_away int,
+	half_time_away int,
+    CHECK(full_time_home >= 0 and full_time_away >= 0 and half_time_home >= 0 and half_time_away >= 0),
+	CHECK(half_time_away <= full_time_away),
+	CHECK(half_time_home <= full_time_home),
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
