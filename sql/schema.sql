@@ -2,19 +2,6 @@ DROP DATABASE IF EXISTS soccer_project;
 CREATE DATABASE soccer_project;
 USE soccer_project;
 
-DROP TABLE IF EXISTS PlayerSeasonStats;
-DROP TABLE IF EXISTS Standings;
-DROP TABLE IF EXISTS TeamMatchStatistics;
-DROP TABLE IF EXISTS Scores;
-DROP TABLE IF EXISTS Fixtures;
-DROP TABLE IF EXISTS Seasons;
-DROP TABLE IF EXISTS Players;
-DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Teams;
-DROP TABLE IF EXISTS Stadiums;
-DROP TABLE IF EXISTS Leagues;
-DROP TABLE IF EXISTS Countries;
-
 CREATE TABLE Countries (
     country_id int AUTO_INCREMENT PRIMARY KEY,
     name       varchar(40) NOT NULL UNIQUE,
@@ -61,7 +48,6 @@ CREATE TABLE Person (
 CREATE TABLE Players (
     person_id     int PRIMARY KEY,
     position      varchar(50),
-    age           int,
     jersey_num    int,
     FOREIGN KEY (person_id) REFERENCES Person (person_id) ON DELETE CASCADE
 );
