@@ -2,19 +2,6 @@ DROP DATABASE IF EXISTS soccer_project;
 CREATE DATABASE soccer_project;
 USE soccer_project;
 
-DROP TABLE IF EXISTS PlayerSeasonStats;
-DROP TABLE IF EXISTS Standings;
-DROP TABLE IF EXISTS MatchStatistics;
-DROP TABLE IF EXISTS Scores;
-DROP TABLE IF EXISTS Fixtures;
-DROP TABLE IF EXISTS Seasons;
-DROP TABLE IF EXISTS Players;
-DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Teams;
-DROP TABLE IF EXISTS Stadiums;
-DROP TABLE IF EXISTS Leagues;
-DROP TABLE IF EXISTS Countries;
-
 CREATE TABLE Countries (
     country_id int AUTO_INCREMENT PRIMARY KEY,
     name       varchar(40) NOT NULL UNIQUE,
@@ -61,7 +48,6 @@ CREATE TABLE Person (
 CREATE TABLE Players (
     person_id     int PRIMARY KEY,
     position      varchar(50),
-    age           int,
     jersey_num    int,
     FOREIGN KEY (person_id) REFERENCES Person (person_id) ON DELETE CASCADE
 );
@@ -77,19 +63,18 @@ CREATE TABLE Seasons (
 
 CREATE TABLE Fixtures (
     match_id        int PRIMARY KEY,
-    home_team_id    int,
-    away_team_id    int,
-    season_id       int,
+    home_team_id    int not NULL,
+    away_team_id    int not NULL,
+    season_id       int not NULL,
     stadium_id      int,
-    winner_id       int,
     match_referee   varchar(40),
-    utc_kickoff     date,
+    utc_kickoff     datetime,
     CHECK (home_team_id <> away_team_id),
     FOREIGN KEY (home_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (away_team_id) REFERENCES Teams (team_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
     FOREIGN KEY (stadium_id) REFERENCES Stadiums (stadium_id),
-    FOREIGN KEY (winner_id) REFERENCES Teams (team_id)
+    CONSTRAINT uk_fixture UNIQUE (season_id, home_team_id, away_team_id)
 );
 
 CREATE TABLE Scores (
@@ -97,25 +82,27 @@ CREATE TABLE Scores (
     full_time_home int,
     full_time_away int,
     half_time_home int,
-    half_time_away int,
+	half_time_away int,
+    CHECK(full_time_home >= 0 and full_time_away >= 0 and half_time_home >= 0 and half_time_away >= 0),
+	CHECK(half_time_away <= full_time_away),
+	CHECK(half_time_home <= full_time_home),
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
-CREATE TABLE MatchStatistics (
-    match_id             int PRIMARY KEY,
-    home_total_shots     int,
-    away_total_shots     int,
-    home_shot_accuracy   float(3,2),
-    away_shot_accuracy   float(3,2),
-    home_corners         int,
-    away_corners         int,
-    home_offsides        int,
-    away_offsides        int,
-    home_tackles         int,
-    away_tackles         int,
-    home_total_passes    int,
-    away_total_passes    int,
-    home_possession      float(3,2),
+CREATE TABLE TeamMatchStatistics (
+    match_id             int,
+    side				 varchar(4),
+    total_shots			 int,
+	shot_accuracy		 DECIMAL(5,2),
+    corners				 int,
+    offsides			 int,
+    tackles				 int,
+	total_passes		 int,
+    possession			 DECIMAL(5,2),
+    PRIMARY KEY (match_id, side),
+    CHECK (side IN ('home', 'away')),
+    CHECK (total_shots >=0 and corners >=0 and offsides >=0 and tackles >=0 and total_passes >=0),
+    CHECK (shot_accuracy >= 0 and shot_accuracy <= 100 and possession >= 0 and possession <= 100),
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
