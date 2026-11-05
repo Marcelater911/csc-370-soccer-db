@@ -4,7 +4,7 @@ USE soccer_project;
 
 DROP TABLE IF EXISTS PlayerSeasonStats;
 DROP TABLE IF EXISTS Standings;
-DROP TABLE IF EXISTS MatchStatistics;
+DROP TABLE IF EXISTS TeamMatchStatistics;
 DROP TABLE IF EXISTS Scores;
 DROP TABLE IF EXISTS Fixtures;
 DROP TABLE IF EXISTS Seasons;
@@ -103,21 +103,20 @@ CREATE TABLE Scores (
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
-CREATE TABLE MatchStatistics (
-    match_id             int PRIMARY KEY,
-    home_total_shots     int,
-    away_total_shots     int,
-    home_shot_accuracy   float(3,2),
-    away_shot_accuracy   float(3,2),
-    home_corners         int,
-    away_corners         int,
-    home_offsides        int,
-    away_offsides        int,
-    home_tackles         int,
-    away_tackles         int,
-    home_total_passes    int,
-    away_total_passes    int,
-    home_possession      float(3,2),
+CREATE TABLE TeamMatchStatistics (
+    match_id             int,
+    side				 varchar(4),
+    total_shots			 int,
+	shot_accuracy		 DECIMAL(5,2),
+    corners				 int,
+    offsides			 int,
+    tackles				 int,
+	total_passes		 int,
+    possession			 DECIMAL(5,2),
+    PRIMARY KEY (match_id, side),
+    CHECK (side IN ('home', 'away')),
+    CHECK (total_shots >=0 and corners >=0 and offsides >=0 and tackles >=0 and total_passes >=0),
+    CHECK (shot_accuracy >= 0 and shot_accuracy <= 100 and possession >= 0 and possession <= 100),
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 
