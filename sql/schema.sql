@@ -65,7 +65,7 @@ CREATE TABLE Fixtures (
     match_id        int PRIMARY KEY,
     home_team_id    int not NULL,
     away_team_id    int not NULL,
-    season_id       int,
+    season_id       int not NULL,
     stadium_id      int,
     match_referee   varchar(40),
     utc_kickoff     datetime,
