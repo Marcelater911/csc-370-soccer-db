@@ -107,7 +107,6 @@ CREATE TABLE TeamMatchStatistics (
 );
 
 CREATE TABLE Standings (
-    standing_id     int AUTO_INCREMENT PRIMARY KEY,
     season_id       int,
     team_id         int,
     position        int,
@@ -118,9 +117,9 @@ CREATE TABLE Standings (
     goal_difference int,
     promotion       boolean,
     relegation      boolean,
+    PRIMARY KEY(season_id, team_id),
     FOREIGN KEY (season_id) REFERENCES Seasons (season_id),
-    FOREIGN KEY (team_id) REFERENCES Teams (team_id),
-    CONSTRAINT uk_season_team UNIQUE (season_id, team_id)
+    FOREIGN KEY (team_id) REFERENCES Teams (team_id)
 );
 
 CREATE TABLE PlayerSeasonStats (
