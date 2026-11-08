@@ -27,14 +27,14 @@ WHERE s.wins > (
     WHERE sub_s.season_id = s.season_id
 );
 
--- 4. ANY / ALL: Players who have scored more goals than ALL players in a specific season/team configuration
+-- 4. ANY / ALL: Players who outscored every player on other teams in the same season (the league's top scorer)
 SELECT p.first_name, p.last_name, p.team_id, pss.goals
 FROM PlayerSeasonStats pss
 JOIN Person p ON pss.player_id = p.person_id
 WHERE pss.goals > ALL (
     SELECT sub_pss.goals
     FROM PlayerSeasonStats sub_pss
-    WHERE sub_pss.season_id = 1 AND sub_pss.team_id <> pss.team_id
+    WHERE sub_pss.season_id = pss.season_id AND sub_pss.team_id <> pss.team_id
 );
 
 -- 5. GROUP BY + HAVING: Full seasons with a big gap between the most and fewest wins
