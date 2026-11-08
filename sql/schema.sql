@@ -34,21 +34,19 @@ CREATE TABLE Teams (
 );
 
 CREATE TABLE Person (
-    person_id     int PRIMARY KEY,
+    person_id     int AUTO_INCREMENT PRIMARY KEY,
     team_id       int,
     first_name    varchar(50) NOT NULL,
     last_name     varchar(50) NOT NULL,
     date_of_birth date,
-    country_id    int,
+    nationality   varchar(50),
     is_coach      boolean,
-    FOREIGN KEY (team_id) REFERENCES Teams (team_id),
-    FOREIGN KEY (country_id) REFERENCES Countries (country_id)
+    FOREIGN KEY (team_id) REFERENCES Teams (team_id)
 );
 
 CREATE TABLE Players (
     person_id     int PRIMARY KEY,
     position      varchar(50),
-    jersey_num    int,
     FOREIGN KEY (person_id) REFERENCES Person (person_id) ON DELETE CASCADE
 );
 
@@ -91,18 +89,22 @@ CREATE TABLE Scores (
 
 CREATE TABLE TeamMatchStatistics (
     match_id             int,
-    side				 varchar(4),
-    total_shots			 int,
-	shot_accuracy		 DECIMAL(5,2),
-    corners				 int,
-    offsides			 int,
-    tackles				 int,
-	total_passes		 int,
-    possession			 DECIMAL(5,2),
+    side                 varchar(4),
+    shots_on_target      int,
+    shots_off_target     int,
+    total_shots          int,
+    corners              int,
+    offsides             int,
+    fouls                int,
+    total_passes         int,
+    yellow_cards         int,
+    red_cards            int,
+    passes_accurate      DECIMAL(5,2),
+    ball_possession      DECIMAL(5,2),
     PRIMARY KEY (match_id, side),
     CHECK (side IN ('home', 'away')),
-    CHECK (total_shots >=0 and corners >=0 and offsides >=0 and tackles >=0 and total_passes >=0),
-    CHECK (shot_accuracy >= 0 and shot_accuracy <= 100 and possession >= 0 and possession <= 100),
+    CHECK (total_shots >= 0 and corners >= 0 and offsides >= 0 and fouls >= 0 and total_passes >= 0),
+    CHECK (passes_accurate >= 0 and passes_accurate <= 100 and ball_possession >= 0 and ball_possession <= 100),
     FOREIGN KEY (match_id) REFERENCES Fixtures (match_id)
 );
 

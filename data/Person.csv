@@ -1,0 +1,590 @@
+person_id,team_id,first_name,last_name,date_of_birth,country_id,is_coach
+577974,33,Harry,Amass,2007-03-16,\N,0
+451302,33,Altay,Bayindir,1998-04-14,\N,0
+141746,33,Bruno,Borges Fernandes,1994-09-08,\N,0
+61256,33,Carlos Henrique,Casimiro,1992-02-23,\N,0
+490881,33,Toby,Collyer,2004-01-03,\N,0
+216051,33,Diogo,Dalot Teixeira,1999-03-18,\N,0
+493250,33,Amad,Diallo,2002-07-11,\N,0
+596777,33,Patrick,Dorgu,2004-10-26,\N,0
+80607,33,Christian,Eriksen,1992-02-14,\N,0
+37642,33,Jonny,Evans,1988-01-03,\N,0
+547676,33,Tyler,Fredricson,2005-02-23,\N,0
+493105,33,Alejandro,Garnacho,2004-07-01,\N,0
+606745,33,Ayden,Heaven,2006-09-22,\N,0
+497894,33,Rasmus,Højlund,2003-02-04,\N,0
+184667,33,Victor,Lindelöf,1994-07-17,\N,0
+95658,33,Harry,Maguire,1993-03-05,\N,0
+516895,33,Kobbie,Mainoo,2005-04-19,\N,0
+222690,33,Tyrell,Malacia,1999-08-17,\N,0
+221820,33,Lisandro,Martínez,1998-01-18,\N,0
+230001,33,Noussair,Mazraoui,1997-11-14,\N,0
+195851,33,Scott,McTominay,\N,\N,0
+184341,33,Mason,Mount,1999-01-10,\N,0
+596047,33,Chido,Obi-Martin,2007-11-29,\N,0
+202641,33,André,Onana,1996-04-02,\N,0
+106760,33,Luke,Shaw,1995-07-12,\N,0
+232112,33,Manuel,Ugarte,2001-04-11,\N,0
+550864,33,Leny,Yoro,2005-11-13,\N,0
+458249,33,Joshua,Zirkzee,2001-05-22,\N,0
+209365,33,Matthijs,de Ligt,1999-08-12,\N,0
+467169,33,Antony Matheus,dos Santos,2000-02-24,\N,0
+179018,34,Miguel,Almirón Rejala,\N,\N,0
+180974,34,Joelinton Cássio,Apolinário de Lira,1996-08-14,\N,0
+201666,34,Harvey,Barnes,1997-12-09,\N,0
+220237,34,Sven,Botman,2000-01-12,\N,0
+78916,34,Dan,Burn,1992-05-09,\N,0
+67089,34,Martin,Dúbravka,1989-01-15,\N,0
+232826,34,Anthony,Gordon,2001-02-24,\N,0
+208706,34,Bruno,Guimarães Rodriguez Moura,1997-11-16,\N,0
+487838,34,Lewis,Hall,2004-09-08,\N,0
+219168,34,Alexander,Isak,1999-09-21,\N,0
+235530,34,Lloyd,Kelly,\N,\N,0
+111773,34,Emil,Krafth,1994-08-02,\N,0
+441191,34,Tino,Livramento,2002-11-12,\N,0
+180135,34,Sean,Longstaff,1997-10-30,\N,0
+547719,34,Lewis,Miley,2006-05-01,\N,0
+114243,34,Jacob,Murphy,1995-02-24,\N,0
+538207,34,William,Osula,2003-08-04,\N,0
+98747,34,Nick,Pope,1992-04-19,\N,0
+119471,34,Fabian,Schär,1991-12-20,\N,0
+169359,34,Matt,Targett,1995-09-18,\N,0
+432422,34,Sandro,Tonali,2000-05-08,\N,0
+77794,34,Kieran,Trippier,1990-09-19,\N,0
+200089,34,Joe,Willock,1999-08-20,\N,0
+75115,34,Callum,Wilson,1992-02-27,\N,0
+232980,35,Max,Aarons,\N,\N,0
+200785,35,Tyler,Adams,1999-02-14,\N,0
+436893,35,Julián,Araujo Zúñiga,2001-08-13,\N,0
+109745,35,Kepa,Arrizabalaga,1994-10-03,\N,0
+168991,35,Philip,Billing,1996-06-11,\N,0
+111317,35,David,Brooks,1997-07-08,\N,0
+158499,35,Ryan,Christie,1995-02-22,\N,0
+155408,35,Lewis,Cook,1997-02-03,\N,0
+463981,35,James,Hill,2002-01-10,\N,0
+554605,35,Dean,Huijsen,2005-04-14,\N,0
+523700,35,Daniel,Jebbison,2003-08-13,\N,0
+544877,35,Milos,Kerkez,2003-11-07,\N,0
+222683,35,Justin,Kluivert,1999-05-05,\N,0
+533463,35,Dango,Ouattara,2002-02-11,\N,0
+606774,35,Remy,Rees-Dottin,2006-03-06,\N,0
+503139,35,Alex,Scott,2003-08-21,\N,0
+437730,35,Antoine,Semenyo,2000-01-07,\N,0
+221466,35,Marcos,Senesi,1997-05-10,\N,0
+530121,35,Zain,Silcott-Duberry,2005-07-09,\N,0
+224995,35,Luis,Sinisterra,1999-06-17,\N,0
+54469,35,Adam,Smith,1991-04-29,\N,0
+575901,35,Julio,Soler,2005-02-16,\N,0
+201658,35,Marcus,Tavernier,1999-03-22,\N,0
+229600,35,Mark,Travers,1999-05-18,\N,0
+606775,35,Ben,Winterburn,2004-09-04,\N,0
+477580,35,Illia,Zabarnyi,2002-09-01,\N,0
+444102,35,Francisco Evanilson,de Lima Barbosa,1999-10-06,\N,0
+168636,35,Enes,Ünal,1997-05-10,\N,0
+245824,36,Carlos Vinícius,Alves Morais,1995-03-25,\N,0
+174874,36,Joachim,Andersen,1996-05-31,\N,0
+232892,36,Calvin,Bassey,1999-12-31,\N,0
+207189,36,Sander,Berge,1998-02-14,\N,0
+47431,36,Willian,Borges da Silva,1988-08-09,\N,0
+76357,36,Tom,Cairney,1991-01-20,\N,0
+166477,36,Timothy,Castagne,1995-12-05,\N,0
+246301,36,Jorge,Cuenca Barreno,1999-11-17,\N,0
+219924,36,Issa,Diop,1997-01-09,\N,0
+573062,36,Martial,Godo,2003-03-14,\N,0
+156689,36,Andreas,Hoelgebaum Pereira,1996-01-01,\N,0
+153133,36,Alex,Iwobi,1996-05-03,\N,0
+102057,36,Raúl,Jiménez,1991-05-05,\N,0
+577725,36,Josh,King,2007-01-03,\N,0
+80201,36,Bernd,Leno,1992-03-04,\N,0
+212314,36,Saša,Lukić,1996-08-13,\N,0
+244042,36,Rodrigo,Muniz Carvalho,2001-05-04,\N,0
+200641,36,Reiss,Nelson,1999-12-10,\N,0
+153366,36,Harrison,Reed,1995-01-27,\N,0
+169528,36,Antonee,Robinson,1997-08-08,\N,0
+184349,36,Ryan,Sessegnon,2000-05-18,\N,0
+209289,36,Emile,Smith Rowe,2000-07-28,\N,0
+490146,36,Jay,Stansfield,\N,\N,0
+167074,36,Kenny,Tete,1995-10-09,\N,0
+159533,36,Adama,Traoré,1996-01-25,\N,0
+153682,36,Harry,Wilson,1997-03-22,\N,0
+516939,39,Emmanuel,Agbadou,1997-06-17,\N,0
+448514,39,Rayan,Aït-Nouri,2001-06-06,\N,0
+231057,39,Jean-Ricner,Bellegarde,1998-06-27,\N,0
+79602,39,Daniel,Bentley,1993-07-13,\N,0
+231480,39,Santiago,Bueno,1998-11-09,\N,0
+200402,39,Nélson,Cabral Semedo,1993-11-16,\N,0
+641221,39,Pedro,Cardoso de Lima,2006-07-01,\N,0
+200600,39,Daniel,Castelo Podence,\N,\N,0
+60232,39,Craig,Dawson,1990-05-06,\N,0
+531170,39,Nasser,Djiga,2002-11-15,\N,0
+87835,39,Matt,Doherty,1992-01-16,\N,0
+220394,39,Tommy,Doyle,2001-10-17,\N,0
+463212,39,Carlos Roberto,Forbs Borges,2004-03-19,\N,0
+181284,39,Gonçalo Manuel,Ganchinho Guedes,1996-11-29,\N,0
+510362,39,Toti António,Gomes,1999-01-16,\N,0
+448089,39,João Victor,Gomes da Silva,2001-02-12,\N,0
+184754,39,Hwang,Hee-chan,1996-01-26,\N,0
+101982,39,Sam,Johnstone,1993-03-25,\N,0
+138001,39,Tom,King,1995-03-09,\N,0
+151086,39,Mario,Lemina,\N,\N,0
+149065,39,José,Malheiro de Sá,1993-01-17,\N,0
+647671,39,Mateus,Mané,2007-09-16,\N,0
+483081,39,Rodrigo,Martins Gomes,2003-07-07,\N,0
+501837,39,Yerson,Mosquera,2001-05-02,\N,0
+433312,39,Marshall,Munetsi,1996-06-22,\N,0
+517179,39,Alfie,Pond,2004-03-01,\N,0
+430871,39,Matheus,Santos Carneiro Da Cunha,1999-05-27,\N,0
+88484,39,Pablo,Sarabia,1992-05-11,\N,0
+247412,39,Jørgen,Strand Larsen,2000-02-06,\N,0
+510363,39,Francisco Jorge,Tomás Oliveira,\N,\N,0
+476502,39,Boubacar,Traoré,2001-08-20,\N,0
+509291,39,André,Trindade da Costa Neto,2001-07-16,\N,0
+169187,40,Trent,Alexander-Arnold,1998-10-07,\N,0
+492777,40,Conor,Bradley,2003-07-09,\N,0
+223541,40,Federico,Chiesa,1997-10-25,\N,0
+500058,40,Jayden,Danns,2006-01-16,\N,0
+244731,40,Luis,Díaz,1997-01-13,\N,0
+444884,40,Harvey,Elliott,2003-04-04,\N,0
+243298,40,Cody,Gakpo,1999-05-07,\N,0
+171287,40,Joe,Gomez,1997-05-23,\N,0
+441266,40,Ryan,Gravenberch,2002-05-16,\N,0
+432987,40,Vítezslav,Jaros,2001-07-23,\N,0
+206915,40,Curtis,Jones,2001-01-30,\N,0
+200720,40,Caoimhin,Kelleher,1998-11-23,\N,0
+204716,40,Ibrahima,Konaté,1999-05-25,\N,0
+243016,40,Alexis,Mac Allister,1998-12-24,\N,0
+447203,40,Darwin,Núñez Ribeiro,1999-06-24,\N,0
+441428,40,Jarell,Quansah,2003-01-29,\N,0
+116535,40,Alisson,Ramses Becker,1992-10-02,\N,0
+122798,40,Andrew,Robertson,1994-03-11,\N,0
+118748,40,Mohamed,Salah,1992-06-15,\N,0
+424876,40,Dominik,Szoboszlai,2000-10-25,\N,0
+194634,40,Diogo,Teixeira da Silva,1996-12-04,\N,0
+214285,40,Konstantinos,Tsimikas,1996-05-12,\N,0
+158983,40,Endo,Wataru,1993-02-09,\N,0
+97032,40,Virgil,van Dijk,1991-07-08,\N,0
+499724,41,Samuel,Amo-Ameyaw,\N,\N,0
+433979,41,Cameron,Archer,2001-12-09,\N,0
+193204,41,Joe,Aribo,1996-07-21,\N,0
+155511,41,Adam,Armstrong,1997-02-10,\N,0
+171771,41,Jan,Bednarek,1996-04-12,\N,0
+477386,41,Armel,Bella-Kotchap,2001-12-11,\N,0
+184386,41,James,Bree,1997-12-11,\N,0
+204814,41,Ben,Brereton Díaz,\N,\N,0
+149519,41,Maxwel,Cornet,1996-09-27,\N,0
+496661,41,Tyler,Dibling,2006-02-17,\N,0
+220585,41,Flynn,Downes,1999-01-20,\N,0
+490503,41,Samuel,Edozie,\N,\N,0
+500926,41,Ronnie,Edwards,\N,\N,0
+551226,41,Mateus Gonçalo,Espanha Fernandes,2004-07-10,\N,0
+90105,41,Ryan,Fraser,1994-02-24,\N,0
+494779,41,Albert,Grønbæk,2001-05-23,\N,0
+245719,41,Taylor,Harwood-Bellis,2002-01-30,\N,0
+620408,41,Joachim,Kayi-Sanda,2006-11-29,\N,0
+39155,41,Adam,Lallana,1988-05-10,\N,0
+167888,41,Joe,Lumley,1995-02-15,\N,0
+204863,41,Ryan,Manning,1996-06-14,\N,0
+58376,41,Alex,McCarthy,1989-12-03,\N,0
+147611,41,Paul,Onuachu,1994-05-28,\N,0
+225321,41,Aaron,Ramsdale,1998-05-14,\N,0
+495024,41,Jay,Robinson,2007-03-15,\N,0
+500016,41,Welington Damascena,Santos,2001-02-19,\N,0
+214466,41,Will,Smallbone,2000-02-21,\N,0
+88900,41,Jack,Stephens,1994-01-27,\N,0
+230348,41,Ross,Stewart,1996-07-11,\N,0
+504783,41,Kamaldeen,Sulemana,2002-02-15,\N,0
+103914,41,Charlie,Taylor,1993-09-18,\N,0
+503714,41,Lesley,Ugochukwu,2004-03-26,\N,0
+158534,41,Kyle,Walker-Peters,1997-04-13,\N,0
+244845,41,Nathan,Wood-Gordon,2002-05-31,\N,0
+219279,41,Sugawara,Yukinari,2000-06-28,\N,0
+461025,42,Nathan,Butler-Oyedeji,2003-01-04,\N,0
+466075,42,Riccardo,Calafiori,2002-05-19,\N,0
+205651,42,Gabriel,Fernando de Jesus,1997-04-03,\N,0
+85955,42,Jorge Luiz,Frello Filho,1991-12-20,\N,0
+219847,42,Kai,Havertz,1999-06-11,\N,0
+440854,42,Jakub,Kiwior,2000-02-15,\N,0
+499169,42,Myles,Lewis-Skelly,2006-09-26,\N,0
+444145,42,Gabriel,Martinelli Silva,2001-06-18,\N,0
+195384,42,Mikel,Merino,1996-06-22,\N,0
+69752,42,Norberto,Murara Neto,1989-07-19,\N,0
+499175,42,Ethan,Nwaneri,2007-03-21,\N,0
+167199,42,Thomas,Partey,1993-06-13,\N,0
+154561,42,David,Raya Martin,1995-09-15,\N,0
+204480,42,Declan,Rice,1999-01-14,\N,0
+223340,42,Bukayo,Saka,2001-09-05,\N,0
+462424,42,William,Saliba,2001-03-24,\N,0
+103955,42,Raheem,Sterling,1994-12-08,\N,0
+223723,42,Tomiyasu,Takehiro,1998-11-05,\N,0
+192895,42,Kieran,Tierney,1997-06-05,\N,0
+445122,42,Jurriën,Timber,2001-06-17,\N,0
+116216,42,Leandro,Trossard,1994-12-04,\N,0
+198869,42,Benjamin,White,1997-10-08,\N,0
+206325,42,Oleksandr,Zinchenko,1996-12-15,\N,0
+226597,42,Gabriel,dos Santos Magalhães,1997-12-19,\N,0
+184029,42,Martin,Ødegaard,1998-12-17,\N,0
+502697,45,Carlos,Alcaraz Durán,2002-11-30,\N,0
+609873,45,Harrison,Armstrong,2007-01-19,\N,0
+480455,45,Jarrad,Branthwaite,2002-06-27,\N,0
+440323,45,Armando,Broja,2001-09-10,\N,0
+177815,45,Dominic,Calvert-Lewin,1997-03-16,\N,0
+59949,45,Séamus,Coleman,1988-10-11,\N,0
+496178,45,Roman,Dixon,2004-12-26,\N,0
+121599,45,Abdoulaye,Doucouré,1993-01-01,\N,0
+232928,45,James,Garner,2001-03-13,\N,0
+486385,45,Norberto Bercique,Gomes Betuncal,1998-01-31,\N,0
+80801,45,Idrissa,Gueye,1989-09-26,\N,0
+221399,45,Jack,Harrison,1996-11-20,\N,0
+194164,45,Mason,Holgate,\N,\N,0
+490094,45,Tim,Iroegbunam,2003-06-30,\N,0
+106611,45,Michael,Keane,1993-01-11,\N,0
+463903,45,Jesper,Lindstrøm,2000-02-29,\N,0
+179519,45,Orel,Mangala,1998-03-18,\N,0
+433154,45,Dwight,McNeil,1999-11-22,\N,0
+224967,45,Vitalii,Mykolenko,1999-05-29,\N,0
+440993,45,Iliman,Ndiaye,2000-03-06,\N,0
+512462,45,Jake,O'Brien,2001-05-15,\N,0
+243571,45,Nathan,Patterson,2001-10-16,\N,0
+111234,45,Jordan,Pickford,1994-03-07,\N,0
+491012,45,Youssef,Ramalho Chermiti,2004-05-24,\N,0
+17761,45,James,Tarkowski,1992-11-19,\N,0
+18892,45,Ashley,Young,1985-07-09,\N,0
+619146,46,Olabade,Aluko,2006-11-30,\N,0
+532534,46,Will,Alves,\N,\N,0
+80146,46,Jordan,Ayew,1991-09-11,\N,0
+111931,46,Ricardo,Barbosa Pereira,1993-10-06,\N,0
+536916,46,Facundo,Buonanotte,2004-12-23,\N,0
+197469,46,Hamza,Choudhury,\N,\N,0
+94147,46,Conor,Coady,1993-02-25,\N,0
+488439,46,Woyo,Coulibaly,1999-05-26,\N,0
+245419,46,Patson,Daka,1998-10-09,\N,0
+96994,46,Bobby,De Cordova-Reid,1993-02-02,\N,0
+199670,46,Odsonne,Edouard,1998-01-16,\N,0
+513527,46,Bilal,El Khannouss,2004-05-10,\N,0
+630664,46,Jake,Evans,2008-06-04,\N,0
+218218,46,Wout,Faes,1998-04-03,\N,0
+531442,46,Abdul,Fatawu,2004-03-08,\N,0
+549640,46,Michael,Golding,2006-05-23,\N,0
+467189,46,Mads,Hermansen,2000-07-11,\N,0
+220627,46,James,Justin,1998-02-23,\N,0
+481510,46,Victor,Kristiansen,2002-12-16,\N,0
+154048,46,Stephy,Mavididi,1998-05-31,\N,0
+461587,46,Kasey,McAteer,2001-11-22,\N,0
+649208,46,Jeremy,Monga,2009-07-10,\N,0
+203341,46,Wilfred,Ndidi,1996-12-16,\N,0
+473341,46,Caleb,Okoli,2001-07-13,\N,0
+209042,46,Oliver,Skipp,2000-09-16,\N,0
+225902,46,Boubakary,Soumaré,1999-02-27,\N,0
+436680,46,Jakub,Stolarczyk,2000-12-19,\N,0
+244619,46,Luke,Thomas,2001-06-10,\N,0
+101668,46,Jamie,Vardy,1987-01-11,\N,0
+93100,46,Jannik,Vestergaard,1992-08-03,\N,0
+95463,46,Danny,Ward,1993-06-22,\N,0
+157668,46,Harry,Winks,1996-02-02,\N,0
+214572,47,Brandon,Austin,1999-01-08,\N,0
+202993,47,Rodrigo,Bentancur,1997-06-25,\N,0
+570526,47,Lucas,Bergvall,2006-02-02,\N,0
+227127,47,Yves,Bissouma,1996-08-30,\N,0
+135720,47,Kevin,Danso,1998-09-19,\N,0
+115556,47,Ben,Davies,1993-04-24,\N,0
+519321,47,Alfie,Dorrington,\N,\N,0
+493125,47,Radu,Drăgușin,2002-02-03,\N,0
+40383,47,Fraser,Forster,1988-03-17,\N,0
+547701,47,Archie,Gray,2006-03-12,\N,0
+85971,47,Son,Heung-min,1992-07-08,\N,0
+242898,47,Brennan,Johnson,2001-05-23,\N,0
+485055,47,Antonín,Kinsky,2003-03-13,\N,0
+445044,47,Dejan,Kulusevski,2000-04-25,\N,0
+552427,47,Will,Lankshear,2005-04-20,\N,0
+172780,47,James,Maddison,1996-11-23,\N,0
+499721,47,Mikey,Moore,2007-08-11,\N,0
+550839,47,Wilson,Odobert,2004-11-28,\N,0
+441164,47,Pedro,Porro,1999-09-13,\N,0
+199249,47,Sergio,Reguilón,1996-12-16,\N,0
+221632,47,Cristian,Romero,1998-04-27,\N,0
+482442,47,Pape Matar,Sarr,2002-09-14,\N,0
+490145,47,Dane,Scarlett,2004-03-24,\N,0
+154566,47,Dominic,Solanke-Mitchell,1997-09-14,\N,0
+232859,47,Djed,Spence,2000-08-09,\N,0
+511499,47,Mathys,Tel,2005-04-27,\N,0
+487053,47,Destiny,Udogie,2002-11-28,\N,0
+184254,47,Guglielmo,Vicario,1996-10-07,\N,0
+165153,47,Timo,Werner,1996-03-06,\N,0
+212319,47,Richarlison,de Andrade,1997-05-10,\N,0
+491279,47,Micky,van de Ven,2001-04-19,\N,0
+57531,48,Michail,Antonio,1990-03-28,\N,0
+84182,48,Alphonse,Areola,1993-02-27,\N,0
+178186,48,Jarrod,Bowen,1996-12-20,\N,0
+518438,48,Kaelan,Casey,2004-10-28,\N,0
+164555,48,Vladimír,Coufal,1992-08-22,\N,0
+55459,48,Aaron,Cresswell,1989-12-15,\N,0
+37096,48,Łukasz,Fabiański,1985-04-18,\N,0
+487117,48,Evan,Ferguson,2004-10-19,\N,0
+91889,48,Niclas,Füllkrug,1993-02-09,\N,0
+84939,48,Danny,Ings,1992-07-23,\N,0
+229384,48,Andy,Irving,2000-05-13,\N,0
+214048,48,Max,Kilman,1997-05-23,\N,0
+460842,48,Mohammed,Kudus,2000-08-02,\N,0
+577114,48,Luis Guilherme,Lira dos Santos,2006-02-09,\N,0
+233963,48,Konstantinos,Mavropanos,1997-12-11,\N,0
+518442,48,Lewis,Orford,2006-02-18,\N,0
+109533,48,Emerson,Palmieri dos Santos,1994-08-03,\N,0
+197024,48,Guido,Rodríguez,1994-04-12,\N,0
+536109,48,Ollie,Scarles,2005-12-12,\N,0
+224860,48,Carlos,Soler,1997-01-02,\N,0
+215439,48,Tomáš,Souček,1995-02-27,\N,0
+450070,48,Crysencio,Summerville,2001-10-30,\N,0
+462116,48,Jean-Clair,Todibo,1999-12-30,\N,0
+224024,48,Lucas,Tolentino Coelho de Lima,1997-08-27,\N,0
+214590,48,Aaron,Wan-Bissaka,1997-11-26,\N,0
+101178,48,James,Ward-Prowse,1994-11-01,\N,0
+213999,48,Edson,Álvarez Velázquez,1997-10-24,\N,0
+577016,49,Josh,Acheampong,2006-05-05,\N,0
+109646,49,Tosin,Adarabioyo,1997-09-24,\N,0
+609640,49,Mathis,Amougou,2006-01-18,\N,0
+242880,49,Benoît,Badiashile,2001-03-26,\N,0
+486672,49,Moisés,Caicedo Corozo,2001-11-02,\N,0
+180736,49,Trevoh,Chalobah,1999-07-05,\N,0
+460028,49,Levi,Colwill,2003-02-26,\N,0
+179268,49,Marc,Cucurella Saseta,1998-07-22,\N,0
+215413,49,Kiernan,Dewsbury-Hall,1998-09-06,\N,0
+448047,49,Enzo,Fernández,2001-01-17,\N,0
+444463,49,Wesley,Fofana,2000-12-17,\N,0
+428399,49,João,Félix Sequeira,\N,\N,0
+550615,49,Tyrique,George,2006-02-04,\N,0
+499309,49,Marc,Guiu Paz,2006-01-04,\N,0
+482609,49,Malo,Gusto,2003-05-19,\N,0
+517052,49,Nicolas,Jackson,2001-06-20,\N,0
+225796,49,Reece,James,1999-12-08,\N,0
+508479,49,Filip,Jørgensen,2002-04-16,\N,0
+514356,49,Roméo,Lavia,2004-01-06,\N,0
+247632,49,Pedro,Lomba Neto,2000-03-09,\N,0
+248857,49,Noni,Madueke,2002-03-10,\N,0
+567119,49,Shumaira,Mheuka,2007-10-20,\N,0
+465920,49,Mykhailo,Mudryk,2001-01-05,\N,0
+213198,49,Christopher,Nkunku,1997-11-14,\N,0
+551230,49,Renato,Palma Veiga,\N,\N,0
+244851,49,Cole,Palmer,2002-05-06,\N,0
+209243,49,Jadon,Sancho,2000-03-25,\N,0
+215059,49,Robert,Sánchez,1997-11-18,\N,0
+211975,50,Manuel,Akanji,1995-07-19,\N,0
+126184,50,Nathan,Aké,1995-02-18,\N,0
+477555,50,Oscar,Bobb,2003-07-12,\N,0
+61366,50,Kevin,De Bruyne,1991-06-28,\N,0
+248875,50,Jérémy,Doku,2002-05-27,\N,0
+575204,50,Claudio,Echeverri,2006-01-02,\N,0
+209244,50,Phil,Foden,2000-05-28,\N,0
+171314,50,Rúben,Gato Alves Dias,1997-05-14,\N,0
+465694,50,Nico,González,2002-01-03,\N,0
+114283,50,Jack,Grealish,1995-09-10,\N,0
+477424,50,Joško,Gvardiol,2002-01-23,\N,0
+59859,50,Ilkay,Gündogan,1990-10-24,\N,0
+223094,50,Erling,Haaland,2000-07-21,\N,0
+220566,50,Rodrigo 'Rodri',Hernandez,1996-06-22,\N,0
+578153,50,Abdukodir,Khusanov,2004-02-29,\N,0
+91651,50,Mateo,Kovačić,1994-05-06,\N,0
+477064,50,Rico,Lewis,2004-11-21,\N,0
+438234,50,Omar,Marmoush,1999-02-07,\N,0
+432714,50,James,McAtee,2002-10-18,\N,0
+510281,50,Sávio 'Savinho',Moreira de Oliveira,2004-04-10,\N,0
+487837,50,Divin,Mubama,2004-10-25,\N,0
+465351,50,Matheus Luiz,Nunes,1998-08-27,\N,0
+472769,50,Nico,O'Reilly,2005-03-21,\N,0
+88248,50,Stefan,Ortega Moreno,1992-11-06,\N,0
+121160,50,Ederson,Santana de Moraes,1993-08-17,\N,0
+554194,50,Jahmai,Simpson-Pusey,2005-11-04,\N,0
+97299,50,John,Stones,1994-05-28,\N,0
+165809,50,Bernardo,Veiga de Carvalho e Silva,1994-08-10,\N,0
+58621,50,Kyle,Walker,1990-05-28,\N,0
+616222,50,Vitor,de Oliveira Nunes dos Reis,2006-01-12,\N,0
+535818,51,Simon,Adingra,2002-01-01,\N,0
+509416,51,Yasin,Ayari,2003-10-06,\N,0
+535301,51,Carlos,Baleba,2004-01-03,\N,0
+439135,51,Eiran,Cashin,2001-11-09,\N,0
+83299,51,Lewis,Dunk,1991-11-21,\N,0
+204214,51,Pervis,Estupiñán,1998-01-21,\N,0
+243568,51,Billy,Gilmour,\N,\N,0
+513433,51,Brajan,Gruda,2004-05-31,\N,0
+514254,51,Diego,Gómez,2003-03-27,\N,0
+532529,51,Jack,Hinshelwood,2005-04-11,\N,0
+597320,51,Harry,Howell,2008-04-20,\N,0
+475168,51,João Pedro,Junqueira de Jesus,2001-09-26,\N,0
+231416,51,Ferdi,Kadioglu,1999-10-07,\N,0
+451340,51,Mitoma,Kaoru,1997-05-20,\N,0
+232792,51,Tariq,Lamptey,2000-09-30,\N,0
+109345,51,Solly,March,1994-07-20,\N,0
+15157,51,James,Milner,1986-01-04,\N,0
+592031,51,Yankuba,Minteh,2004-07-22,\N,0
+243505,51,Jakub,Moder,\N,\N,0
+219249,51,Matt,O'Riley,2000-11-21,\N,0
+463067,51,Georginio,Rutter,2002-04-20,\N,0
+441192,51,Jeremy,Sarmiento Morante,2002-06-16,\N,0
+49262,51,Jason,Steele,1990-08-18,\N,0
+111478,51,Joël,Veltman,1992-01-15,\N,0
+489639,51,Bart,Verbruggen,2002-08-18,\N,0
+110735,51,Adam,Webster,1995-01-04,\N,0
+50175,51,Danny,Welbeck,1990-11-26,\N,0
+467779,51,Mats,Wieffer,1999-11-16,\N,0
+223434,51,Igor Julio,dos Santos de Paulo,1998-02-07,\N,0
+469142,51,Jan Paul,van Hecke,2000-06-08,\N,0
+579075,52,Asher,Agbinone,2005-09-28,\N,0
+172850,52,Ben,Chilwell,1996-12-21,\N,0
+57328,52,Nathaniel,Clyne,1991-04-05,\N,0
+489706,52,Justin,Devenny,2003-10-11,\N,0
+438464,52,Cheick,Doucouré,2000-01-08,\N,0
+606921,52,Romain,Esse,2005-05-13,\N,0
+232413,52,Eberechi,Eze,1998-06-29,\N,0
+536694,52,Matheus,França de Oliveira,2004-04-01,\N,0
+209036,52,Marc,Guéhi,2000-07-13,\N,0
+172649,52,Dean,Henderson,1997-03-12,\N,0
+108413,52,Will,Hughes,1995-04-17,\N,0
+209400,52,Daichi,Kamada,1996-08-05,\N,0
+590012,52,Caleb,Kporha,2006-07-15,\N,0
+437499,52,Maxence,Lacroix,2000-04-06,\N,0
+152551,52,Jefferson,Lerma Solís,1994-10-25,\N,0
+231747,52,Jean-Philippe,Mateta,1997-06-28,\N,0
+244723,52,Tyrick,Mitchell,1999-09-01,\N,0
+247348,52,Daniel,Muñoz,1996-05-26,\N,0
+205533,52,Eddie,Nketiah,1999-05-30,\N,0
+515621,52,Chadi,Riad Dnanou,2003-06-17,\N,0
+427623,52,Chris,Richards,2000-03-28,\N,0
+232185,52,Ismaïla,Sarr,1998-02-25,\N,0
+86417,52,Jeffrey,Schlupp,\N,\N,0
+55494,52,Joel,Ward,1989-10-29,\N,0
+496221,52,Adam,Wharton,2004-02-06,\N,0
+191866,55,Kristoffer,Ajer,1998-04-17,\N,0
+432830,55,Nathan,Collins,2001-04-30,\N,0
+440089,55,Mikkel,Damsgaard,2000-07-03,\N,0
+118342,55,Mark,Flekken,1993-06-13,\N,0
+244858,55,Fábio,Freitas Gouveia Carvalho,2002-08-30,\N,0
+194010,55,Rico,Henry,1997-07-08,\N,0
+204580,55,Vitaly,Janelt,1998-05-10,\N,0
+207283,55,Mathias,Jensen,1996-01-01,\N,0
+570241,55,Kim,Ji-soo,2004-12-24,\N,0
+607464,55,Michael,Kayode,2004-07-10,\N,0
+628204,55,Yunus Emre,Konak,2006-01-10,\N,0
+249231,55,Keane,Lewis-Potter,2001-02-22,\N,0
+220695,55,Paris,Maghoma,2001-05-08,\N,0
+446008,55,Bryan,Mbeumo,1999-08-07,\N,0
+51927,55,Ben,Mee,1989-09-21,\N,0
+499717,55,Jayden,Meghoma,2006-06-28,\N,0
+502500,55,Igor Thiago,Nascimento Rodrigues,2001-06-26,\N,0
+626464,55,Gustavo,Nunes Fernandes Gomes,2005-11-20,\N,0
+128295,55,Christian,Nørgaard,1994-03-10,\N,0
+428580,55,Frank,Onyeka,1998-01-01,\N,0
+231065,55,Ethan,Pinnock,1993-05-29,\N,0
+226956,55,Mads,Roerslev Rasmussen,1999-06-24,\N,0
+513418,55,Kevin,Schade,2001-11-27,\N,0
+591357,55,Ryan,Trevitt,2003-03-12,\N,0
+507433,55,Hákon,Valdimarsson,2001-10-13,\N,0
+216646,55,Yoane,Wissa,1996-09-03,\N,0
+508395,55,Yehor,Yarmoliuk,2004-03-01,\N,0
+444765,55,Sepp,van den Berg,2001-12-20,\N,0
+462387,57,Ali,Al-Hamadi,\N,\N,0
+173818,57,Nathan,Broadhead,1998-04-05,\N,0
+122411,57,Cameron,Burgess,1995-10-21,\N,0
+149929,57,Wes,Burns,1994-11-23,\N,0
+454667,57,Jens,Cajuste,1999-08-10,\N,0
+196411,57,Conor,Chaplin,1997-02-16,\N,0
+232228,57,Harry,Clarke,\N,\N,0
+443261,57,Jack,Clarke,2000-11-23,\N,0
+455084,57,Leif,Davis,1999-12-31,\N,0
+463034,57,Liam,Delap,2003-02-08,\N,0
+214964,57,George,Edmundson,\N,\N,0
+474120,57,Julio,Enciso,2004-01-23,\N,0
+503301,57,Omari,Giraud-Hutchinson,2003-10-30,\N,0
+198826,57,Ben,Godfrey,1998-01-15,\N,0
+449429,57,Jacob,Greaves,2000-09-12,\N,0
+222625,57,George,Hirst,1999-02-15,\N,0
+222018,57,Ben,Johnson,2000-01-24,\N,0
+106606,57,Massimo,Luongo,1992-09-25,\N,0
+74944,57,Sam,Morsy,1991-09-10,\N,0
+232917,57,Arijanet,Muric,1998-11-07,\N,0
+167191,57,Marcus,Myers-Harness,\N,\N,0
+216616,57,Dara,O'Shea,1999-03-04,\N,0
+229164,57,Chiedozie,Ogbene,1997-05-01,\N,0
+112520,57,Alex,Palmer,1996-08-10,\N,0
+155405,57,Kalvin,Phillips,1995-12-02,\N,0
+481624,57,Jaden,Philogene,2002-02-08,\N,0
+172453,57,Sam,Szmodics,1995-09-24,\N,0
+231899,57,Jack,Taylor,1998-06-23,\N,0
+108053,57,Conor,Townsend,1993-03-04,\N,0
+180804,57,Axel,Tuanzebe,1997-11-14,\N,0
+108813,57,Christian,Walton,1995-11-09,\N,0
+220583,57,Luke,Woolfenden,1998-10-21,\N,0
+159506,65,Ola,Aina,1996-10-08,\N,0
+215379,65,Elliot,Anderson,2002-11-06,\N,0
+210156,65,Taiwo,Awoniyi,1997-08-12,\N,0
+90585,65,Willy,Boly,1991-02-03,\N,0
+250199,65,Nicolás,Domínguez,1998-06-28,\N,0
+449434,65,Anthony,Elanga,2002-04-27,\N,0
+510500,65,João Pedro,Ferreira Silva,1999-08-01,\N,0
+222531,65,Morgan,Gibbs-White,2000-01-27,\N,0
+209046,65,Callum,Hudson-Odoi,2000-11-07,\N,0
+227444,65,Nikola,Milenković,1997-10-12,\N,0
+106468,65,Álex,Moreno Lopera,1993-06-08,\N,0
+485047,65,Felipe,Rodrigues da Silva,2001-06-30,\N,0
+210462,65,Ibrahim,Sangaré,1997-12-02,\N,0
+575476,65,Murillo,Santiago Costa dos Santos,2002-07-04,\N,0
+85633,65,Matz,Sels,1992-02-26,\N,0
+502222,65,Ramón,Sosa,1999-08-31,\N,0
+114241,65,Harry,Toffolo,1995-08-19,\N,0
+215136,65,Neco,Williams,2001-04-13,\N,0
+60689,65,Chris,Wood,1991-12-07,\N,0
+204968,65,Ryan,Yates,1997-11-21,\N,0
+569014,65,Eric,da Silva Moreira,2006-05-03,\N,0
+513046,65,Danilo,dos Santos de Oliveira,2001-04-29,\N,0
+174292,66,Marco,Asensio,1996-01-21,\N,0
+215711,66,Leon,Bailey,1997-08-09,\N,0
+88894,66,Ross,Barkley,1993-12-05,\N,0
+515597,66,Lamare,Bogarde,2004-01-05,\N,0
+195546,66,Emiliano,Buendía Stati,1996-12-25,\N,0
+199796,66,Matty,Cash,1997-08-07,\N,0
+101188,66,Lucas,Digne,1993-07-20,\N,0
+220362,66,Axel,Disasi,1998-03-11,\N,0
+476344,66,Jhon,Durán,\N,\N,0
+606798,66,Andrés,García,2003-02-07,\N,0
+226944,66,Boubacar,Kamara,1999-11-23,\N,0
+199798,66,Ezri,Konsa Ngoyo,1997-10-23,\N,0
+441302,66,Ian,Maatsen,2002-03-10,\N,0
+204646,66,Donyell,Malen,1999-01-19,\N,0
+98980,66,Emiliano,Martínez Romero,1992-09-02,\N,0
+122806,66,John,McGinn,1994-10-18,\N,0
+149484,66,Tyrone,Mings,1993-03-13,\N,0
+578545,66,Kosta,Nedeljković,\N,\N,0
+111782,66,Robin,Olsen,1990-01-08,\N,0
+449871,66,Amadou,Onana,2001-08-16,\N,0
+232653,66,Jacob,Ramsey,2001-05-28,\N,0
+176297,66,Marcus,Rashford,1997-10-31,\N,0
+244850,66,Morgan,Rogers,2002-07-26,\N,0
+165659,66,Diego Carlos,Santos Silva,\N,\N,0
+166989,66,Youri,Tielemans,1997-05-07,\N,0
+244954,66,Pau,Torres,1997-01-16,\N,0
+178301,66,Ollie,Watkins,1995-12-30,\N,0
+100051017,42,Mikel,Arteta,1982-03-26,\N,1
+100037568,66,Unai,Emery,1971-11-03,\N,1
+100050427,35,Andoni,Iraola,1982-06-22,\N,1
+100042830,55,Thomas,Frank,1973-10-09,\N,1
+100053901,51,Fabian,Hürzeler,1993-02-26,\N,1
+100048548,49,Enzo,Maresca,1980-02-10,\N,1
+100044409,52,Oliver,Glasner,1974-08-28,\N,1
+100000084,45,David,Moyes,1963-04-25,\N,1
+100041800,36,Marco Alexandre,Saraiva da Silva,1977-07-12,\N,1
+100047417,57,Kieran,McKenna,1986-05-14,\N,1
+100050995,46,Ruud,van Nistelrooij,1976-07-01,\N,1
+100052173,40,Arne,Slot,1978-09-17,\N,1
+100037973,50,Pep,Guardiola,1971-01-18,\N,1
+100053636,33,Ruben Filipe,Marques Diogo Amorim,1985-01-27,\N,1
+100038215,34,Eddie,Howe,1977-11-29,\N,1
+100041808,65,Nuno Herlander,Simões Espírito Santo,1974-01-25,\N,1
+100047426,41,Simon,Rusk,1981-12-17,\N,1
+100041880,47,Ange,Postecoglou,1965-08-27,\N,1
+100046435,48,Graham,Potter,1975-05-20,\N,1
+100040854,39,Vítor Manuel,de Oliveira Lopes Pereira,1968-07-26,\N,1
+990000001,33,Erik,ten Hag,1970-02-02,\N,1
+990000002,46,Steve,Cooper,1979-12-10,\N,1
+990000003,41,Russell,Martin,1986-01-04,\N,1
+990000004,41,Ivan,Jurić,1975-08-25,\N,1
+990000005,39,Gary,O'Neil,1983-05-18,\N,1
+990000006,45,Sean,Dyche,1971-06-28,\N,1
+990000007,48,Julen,Lopetegui,1966-08-28,\N,1
