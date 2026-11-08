@@ -5,8 +5,9 @@ USE soccer_project;
 SELECT DISTINCT c.name AS country_name
 FROM Countries c
 JOIN (
-    SELECT t.country_id 
-    FROM Teams t 
+    SELECT l.country_id
+    FROM Teams t
+    JOIN Leagues l ON t.league_id = l.league_id
     WHERE t.year_established < 1900
 ) historic_teams ON c.country_id = historic_teams.country_id;
 
@@ -36,11 +37,11 @@ WHERE pss.goals > ALL (
     WHERE sub_pss.season_id = 1 AND sub_pss.team_id <> pss.team_id
 );
 
--- 5. GROUP BY + HAVING: Seasons where the average team goal difference is strictly greater than 0, filtering for competitive tiers
-SELECT season_id, COUNT(team_id) AS total_teams, AVG(goal_difference) AS avg_gd
+-- 5. GROUP BY + HAVING: Full seasons with a big gap between the most and fewest wins
+SELECT season_id, COUNT(team_id) AS total_teams, MAX(wins) - MIN(wins) AS win_gap
 FROM Standings
 GROUP BY season_id
-HAVING AVG(goal_difference) >= 0 AND COUNT(team_id) >= 18;
+HAVING COUNT(team_id) >= 18 AND MAX(wins) - MIN(wins) > 20;
 
 -- 6A. Subquery approach (Teams with no standings row in the 2024/25 season)
 SELECT t.team_id, t.name
