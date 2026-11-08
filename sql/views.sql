@@ -38,9 +38,8 @@ SELECT
     p.last_name,
     p.team_id,
     pl.position,
-    pl.jersey_num,
     p.date_of_birth,
-    p.country_id,
+    p.nationality,
 
     TIMESTAMPDIFF(
         YEAR,

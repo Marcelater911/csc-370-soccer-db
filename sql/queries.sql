@@ -1,37 +1,77 @@
--- Demo queries showing the seeded data
+-- Phase 4: Advanced SQL Queries & Performance Analysis
 USE soccer_project;
 
--- 1. Standings: top 5 teams of the Premier League in the 2024/25 season
-SELECT st.position, t.name, st.matches_played, st.wins, st.draws, st.losses, st.goal_difference
-FROM Standings st
-JOIN Teams t ON t.team_id = st.team_id
-JOIN Seasons s ON s.season_id = st.season_id
-JOIN Leagues l ON l.league_id = s.league_id
-WHERE l.name = 'Premier League'
-  AND s.start_year = 2024
-  AND st.position <= 5
-ORDER BY st.position;
+-- 1. DISTINCT & Subquery in FROM: Countries that have at least one historic team (founded before 1900)
+SELECT DISTINCT c.name AS country_name
+FROM Countries c
+JOIN (
+    SELECT l.country_id
+    FROM Teams t
+    JOIN Leagues l ON t.league_id = l.league_id
+    WHERE t.year_established < 1900
+) historic_teams ON c.country_id = historic_teams.country_id;
 
--- 2. Standings: teams that won 25 or more matches
-SELECT t.name, st.wins
-FROM Standings st
-JOIN Teams t ON t.team_id = st.team_id
-WHERE st.wins >= 25;
+-- 2. Scalar Subquery: Teams with a stadium capacity greater than the global average capacity
+SELECT t.name, st.name AS stadium_name, st.capacity
+FROM Teams t
+JOIN Stadiums st ON t.stadium_id = st.stadium_id
+WHERE st.capacity > (SELECT AVG(capacity) FROM Stadiums);
 
--- 3. Seasons: every league's 2024/25 season
-SELECT l.name, s.start_year, s.end_year
-FROM Seasons s
-JOIN Leagues l ON l.league_id = s.league_id
-WHERE s.start_year = 2024;
+-- 3. Correlated Subquery: Teams that have more wins than the average wins of all teams in their specific season
+SELECT s.team_id, t.name, s.season_id, s.wins
+FROM Standings s
+JOIN Teams t ON s.team_id = t.team_id
+WHERE s.wins > (
+    SELECT AVG(sub_s.wins)
+    FROM Standings sub_s
+    WHERE sub_s.season_id = s.season_id
+);
 
--- 4. Stadiums: stadiums that hold more than 60,000 people, largest first
-SELECT name, city, capacity
-FROM Stadiums
-WHERE capacity > 60000
-ORDER BY capacity DESC;
+-- 4. ANY / ALL: Players who outscored every player on other teams in the same season (the league's top scorer)
+SELECT p.first_name, p.last_name, p.team_id, pss.goals
+FROM PlayerSeasonStats pss
+JOIN Person p ON pss.player_id = p.person_id
+WHERE pss.goals > ALL (
+    SELECT sub_pss.goals
+    FROM PlayerSeasonStats sub_pss
+    WHERE sub_pss.season_id = pss.season_id AND sub_pss.team_id <> pss.team_id
+);
 
--- 5. Teams: clubs founded before 1880
-SELECT name, year_established
-FROM Teams
-WHERE year_established < 1880
-ORDER BY year_established;
+-- 5. GROUP BY + HAVING: Full seasons with a big gap between the most and fewest wins
+SELECT season_id, COUNT(team_id) AS total_teams, MAX(wins) - MIN(wins) AS win_gap
+FROM Standings
+GROUP BY season_id
+HAVING COUNT(team_id) >= 18 AND MAX(wins) - MIN(wins) > 20;
+
+-- 6A. Subquery approach (Teams with no standings row in the 2024/25 season)
+SELECT t.team_id, t.name
+FROM Teams t
+WHERE t.team_id NOT IN (
+    SELECT st.team_id
+    FROM Standings st
+    JOIN Seasons s ON st.season_id = s.season_id
+    WHERE s.start_year = 2024
+);
+
+-- 6B. Converted to LEFT JOIN / NOT NULL equivalent
+SELECT t.team_id, t.name
+FROM Teams t
+LEFT JOIN (
+    SELECT st.team_id
+    FROM Standings st
+    JOIN Seasons s ON st.season_id = s.season_id
+    WHERE s.start_year = 2024
+) active_st ON t.team_id = active_st.team_id
+WHERE active_st.team_id IS NULL;
+
+
+-- Step A: Run EXPLAIN ANALYZE on a non-FK column before adding an index
+EXPLAIN ANALYZE 
+SELECT * FROM Standings WHERE wins = 20;
+
+-- Step B: Add an index to a non-FK column (Standings.wins)
+CREATE INDEX idx_standings_wins ON Standings(wins);
+
+-- Step C: Run EXPLAIN ANALYZE again to compare execution cost/plans
+EXPLAIN ANALYZE 
+SELECT * FROM Standings WHERE wins = 20;
