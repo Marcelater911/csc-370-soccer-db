@@ -1,6 +1,43 @@
 # Soccer-db
 Contributors: Abhishek, Marcelo, Kevin and Jawin.
 
+## How to Run
+
+### Requirements
+- MySQL 8.0.18 or newer (needed for `EXPLAIN ANALYZE`)
+- MySQL Workbench, or any SQL client that supports `LOAD DATA LOCAL INFILE`
+- A local clone of this repository (the CSV files in `data/` are needed)
+
+### 1. Enable loading local files (if useing my SQL)
+The seed script loads data from CSV files, which MySQL blocks by default.
+- **Server:** run `SET GLOBAL local_infile = 1;`
+- **Workbench:** go to Database → Manage Connections → your connection → Advanced, add `OPT_LOCAL_INFILE=1` in the "Others" box, then reconnect.
+
+### 2. Set the CSV paths in `seed.sql`
+`seed.sql` uses placeholder paths (`'absolute path to stadiums.csv'`). Replace them with the location of the `data/` folder on your computer:
+1. Find & Replace `absolute path to ` with the full path to your `data/` folder, ending in `/`. Use forward slashes `/`, even on Windows.
+   - Mac example: `/Users/yourname/csc-370-soccer-db/data/`
+   - Windows example: `C:/Users/yourname/csc-370-soccer-db/data/`
+2. `premier_league_2024.csv` is in a different folder. Fix that one line by hand so it points to `data/teams/seasons/2024/premier_league_2024.csv`.
+
+Do not commit these path changes; they only work on your computer.
+
+### 3. Run the files in order
+| Order | File | What it does |
+|---|---|---|
+| 1 | `sql/schema.sql` | Creates the database and all tables (drops any existing copy first) |
+| 2 | `sql/seed.sql` | Loads the data from the CSV files |
+| 3 | `sql/views.sql` | Creates the views (`v_standings`, `v_player_ages`, `v_match_results`) |
+| 4 | `sql/queries.sql` | Runs the example queries and the `EXPLAIN ANALYZE` index comparison |
+
+### 4. Check the data loaded
+The end of `seed.sql` prints row counts. You should see **589** people, **562** players and **574** player season stats. If PlayerSeasonStats shows 0, the `premier_league_2024.csv` path is wrong (see step 2).
+
+### Notes
+- The `Scores` table has no data yet, so `v_match_results` shows no winners.
+- `queries.sql` creates an index (`idx_standings_wins`). Running it a second time without re-running `schema.sql` gives a "duplicate key name" error.
+
+
 ## Idea
 This project is built to capture the soccer league management system of Europe's top 5 soccer leagues. The Idea is to replicate the backend and database architecture of a digital soccer media tracking platform which allows users to quickly find information about the latest games, upcoming fixtures, updated league standings, match statistics, and get more information about core entities (player, coaches, teams, leagues) of the game.
 
@@ -66,13 +103,13 @@ CREATE TABLE Fixtures (
 - Queries using GROUP BY/HAVING, subqueries, and a subquery converted to an outer join ✅
 - Secondary index tested with EXPLAIN ANALYZE ✅
 
-
 ## Next Sprint planning
 - Load match scores.
 - add queries that use veiws
 - acid transactions
 - badic security
 - analysisng querey algoritms
+- add data dump
 
 ## References
 - Took inspiration from a similar project implementing a [Football League Management System](https://github.com/kaimg/Sports-League-Management-System)
