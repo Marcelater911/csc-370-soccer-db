@@ -14,13 +14,42 @@ The seed script loads data from CSV files, which MySQL blocks by default.
 - **Workbench:** go to Database → Manage Connections → your connection → Advanced, add `OPT_LOCAL_INFILE=1` in the "Others" box, then reconnect.
 
 ### 2. Set the CSV paths in `seed.sql`
-`seed.sql` uses placeholder paths (`'absolute path to stadiums.csv'`). Replace them with the location of the `data/` folder on your computer:
-1. Find & Replace `absolute path to ` with the full path to your `data/` folder, ending in `/`. Use forward slashes `/`, even on Windows.
-   - Mac example: `/Users/yourname/csc-370-soccer-db/data/`
-   - Windows example: `C:/Users/yourname/csc-370-soccer-db/data/`
-2. `premier_league_2024.csv` is in a different folder. Fix that one line by hand so it points to `data/teams/seasons/2024/premier_league_2024.csv`.
+`seed.sql` doesn't know where the CSV files are on your computer, so it uses placeholders like `'absolute path to stadiums.csv'`. You need to replace each placeholder with the real location of the file.
 
-Do not commit these path changes; they only work on your computer.
+**Step 1: Find your `data` folder's full path**
+- **Mac:** in Finder, open the repo, right-click the `data` folder, hold **Option**, and choose **Copy "data" as Pathname**.
+- **Windows:** in File Explorer, open the repo, **Shift + right-click** the `data` folder, choose **Copy as path**, then change every `\` to `/` and remove the quotes.
+
+It should look something like this:
+- Mac: `/Users/yourname/csc-370-soccer-db/data`
+- Windows: `C:/Users/yourname/csc-370-soccer-db/data`
+
+**Step 2: Replace all the placeholders at once**
+Open `seed.sql` and open Find & Replace:
+- **VS Code:** **Cmd+Option+F** on Mac, **Ctrl+H** on Windows
+- **Other editors (e.g. MySQL Workbench):** use the Find & Replace option in the **Edit** menu
+
+Then:
+- **Find:** `absolute path to ` (include the space at the end)
+- **Replace:** your path from Step 1, **with a `/` added at the end**
+- Click **Replace All**
+
+Every line should now look like this (Mac example):
+
+| Before | After |
+|---|---|
+| `'absolute path to stadiums.csv'` | `'/Users/yourname/csc-370-soccer-db/data/stadiums.csv'` |
+
+**Step 3: Fix the one file that's in a different folder**
+`premier_league_2024.csv` is **not** directly in `data/`; it's three folders deeper. Find this line in `seed.sql` and add `teams/seasons/2024/` before the file name:
+
+| After Step 2 (wrong) | Correct |
+|---|---|
+| `'/Users/yourname/csc-370-soccer-db/data/premier_league_2024.csv'` | `'/Users/yourname/csc-370-soccer-db/data/teams/seasons/2024/premier_league_2024.csv'` |
+
+If you skip this step, `seed.sql` still runs without errors, but the `PlayerSeasonStats` table ends up empty.
+
+**Do not commit these changes.** The paths only work on your computer.
 
 ### 3. Run the files in order
 | Order | File | What it does |
@@ -31,7 +60,7 @@ Do not commit these path changes; they only work on your computer.
 | 4 | `sql/queries.sql` | Runs the example queries and the `EXPLAIN ANALYZE` index comparison |
 
 ### 4. Check the data loaded
-The end of `seed.sql` prints row counts. You should see **589** people, **562** players and **574** player season stats. If PlayerSeasonStats shows 0, the `premier_league_2024.csv` path is wrong (see step 2).
+The end of `seed.sql` prints row counts. You should see **589** people, **562** players and **574** player season stats. If PlayerSeasonStats shows 0, the `premier_league_2024.csv` path is wrong (see step 3).
 
 ### Notes
 - The `Scores` table has no data yet, so `v_match_results` shows no winners.
@@ -94,7 +123,7 @@ CREATE TABLE Fixtures (
 - Simulate matches to see real-time updates.
 
 
-### Current sprint 2
+## Current sprint 2
 - Cleaned up Fixtures (removed stored winner, datetime kickoff, no duplicate fixtures) and added Scores CHECKs ✅
 - Restructured match statistics into one row per team per match (TeamMatchStatistics) ✅
 - Composite primary keys to enforce uniqueness by design (TeamMatchStatistics, PlayerSeasonStats, Standings) ✅
@@ -107,7 +136,7 @@ CREATE TABLE Fixtures (
 - Load match scores.
 - add queries that use veiws
 - acid transactions
-- badic security
+- basic security
 - analysisng querey algoritms
 - add data dump
 
